@@ -1,0 +1,17 @@
+services:
+  nas-tools:
+    image: nastool/nas-tools:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:3000"
+    volumes:
+      - {{config_dir}}:/config
+      - {{media_dir}}:/media
+    environment:
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - TZ=Asia/Shanghai
+      - NASTOOL_AUTO_UPDATE=false
+    network_mode: bridge
+    hostname: nas-tools

@@ -1,0 +1,17 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - TZ=Asia/Shanghai
+    ports:
+      - "{{http_port}}:9091"
+      - "{{bt_port}}:51413"
+      - "{{bt_port}}:51413/udp"
+    volumes:
+      - {{config_dir}}:/config
+      - {{download_dir}}:/downloads
+      - {{watch_dir}}:/watch

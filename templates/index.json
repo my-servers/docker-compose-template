@@ -166,5 +166,45 @@
     "icon": "arrow.down.to.line",
     "docker_compose_path": "templates/aria2/docker-compose.yaml",
     "args_path": "templates/aria2/args.json"
+  },
+  {
+    "id": "nextcloud",
+    "name": "Nextcloud",
+    "description": "私有云盘与办公套件，支持文件、日历、联系人管理",
+    "icon": "https://www.google.com/s2/favicons?domain=nextcloud.com&sz=128",
+    "docker_compose_path": "templates/nextcloud/docker-compose.yaml",
+    "args_path": "templates/nextcloud/args.json"
+  },
+  {
+    "id": "navidrome",
+    "name": "Navidrome",
+    "description": "开源音乐服务器，支持流媒体播放和管理",
+    "icon": "https://www.google.com/s2/favicons?domain=navidrome.org&sz=128",
+    "docker_compose_path": "templates/navidrome/docker-compose.yaml",
+    "args_path": "templates/navidrome/args.json"
+  },
+  {
+    "id": "transmission",
+    "name": "Transmission",
+    "description": "轻量级 BT 下载器，资源占用低",
+    "icon": "https://www.google.com/s2/favicons?domain=transmissionbt.com&sz=128",
+    "docker_compose_path": "templates/transmission/docker-compose.yaml",
+    "args_path": "templates/transmission/args.json"
+  },
+  {
+    "id": "nastools",
+    "name": "NASTools",
+    "description": "影视媒体管理工具，支持自动下载和整理",
+    "icon": "https://www.google.com/s2/favicons?domain=nastool.eu&sz=128",
+    "docker_compose_path": "templates/nastools/docker-compose.yaml",
+    "args_path": "templates/nastools/args.json"
+  },
+  {
+    "id": "homepage",
+    "name": "Homepage",
+    "description": "自建应用导航主页，支持 Docker 状态监控",
+    "icon": "https://www.google.com/s2/favicons?domain=gethomepage.dev&sz=128",
+    "docker_compose_path": "templates/homepage/docker-compose.yaml",
+    "args_path": "templates/homepage/args.json"
   }
 ]

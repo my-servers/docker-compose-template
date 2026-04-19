@@ -1,0 +1,65 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "navidrome",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "navidrome"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "Navidrome Web 页面端口",
+      "placeholder": "4533",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "4533"
+    },
+    {
+      "key": "data_dir",
+      "label": "数据目录",
+      "description": "Navidrome 数据目录",
+      "placeholder": "./data",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./data"
+    },
+    {
+      "key": "music_dir",
+      "label": "音乐目录",
+      "description": "音乐文件目录",
+      "placeholder": "./music",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./music"
+    }
+  ],
+  "groups": []
+}

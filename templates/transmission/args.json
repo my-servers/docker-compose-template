@@ -1,0 +1,85 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "transmission",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "transmission"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "Web 端口",
+      "description": "Transmission WebUI 端口",
+      "placeholder": "9091",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "9091"
+    },
+    {
+      "key": "bt_port",
+      "label": "BT 端口",
+      "description": "BT 下载端口",
+      "placeholder": "51413",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "51413"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Transmission 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    },
+    {
+      "key": "download_dir",
+      "label": "下载目录",
+      "description": "下载文件保存目录",
+      "placeholder": "./downloads",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./downloads"
+    },
+    {
+      "key": "watch_dir",
+      "label": "监控目录",
+      "description": "监控目录，放入种子自动下载",
+      "placeholder": "./watch",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./watch"
+    }
+  ],
+  "groups": []
+}

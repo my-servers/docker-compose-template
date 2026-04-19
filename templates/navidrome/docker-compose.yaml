@@ -1,0 +1,13 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    user: "{{puid}}:{{pgid}}"
+    ports:
+      - "{{http_port}}:4533"
+    volumes:
+      - {{data_dir}}:/data
+      - {{music_dir}}:/music:ro
+    environment:
+      - TZ=Asia/Shanghai

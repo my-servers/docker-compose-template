@@ -1,0 +1,65 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "nas-tools",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "nas-tools"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "NASTools Web 页面端口",
+      "placeholder": "3000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "3000"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "NASTools 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    },
+    {
+      "key": "media_dir",
+      "label": "媒体目录",
+      "description": "媒体文件目录",
+      "placeholder": "./media",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./media"
+    }
+  ],
+  "groups": []
+}
