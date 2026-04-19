@@ -1,0 +1,188 @@
+{
+  "schema": [
+    {
+      "key": "image_tag",
+      "label": "镜像标签",
+      "description": "例如 stable、1.27-alpine",
+      "placeholder": "stable",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "stable"
+    },
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "用于 docker 容器命名",
+      "placeholder": "nginx-static",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "nginx-static"
+    }
+  ],
+  "groups": [
+    {
+      "key": "ports",
+      "label": "端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "8080",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "8080"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "80",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "80"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口映射协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            { "label": "TCP", "value": "tcp" },
+            { "label": "UDP", "value": "udp" }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "8080",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "8080"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "80",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "80"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口映射协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                { "label": "TCP", "value": "tcp" },
+                { "label": "UDP", "value": "udp" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "volumes",
+      "label": "目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机上的静态文件目录",
+          "placeholder": "./html",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./html"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "挂载到容器内的路径",
+          "placeholder": "/usr/share/nginx/html",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/usr/share/nginx/html"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "ro",
+          "options": [
+            { "label": "只读", "value": "ro" },
+            { "label": "读写", "value": "rw" }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机上的静态文件目录",
+              "placeholder": "./html",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./html"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "挂载到容器内的路径",
+              "placeholder": "/usr/share/nginx/html",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/usr/share/nginx/html"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "ro",
+              "options": [
+                { "label": "只读", "value": "ro" },
+                { "label": "读写", "value": "rw" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

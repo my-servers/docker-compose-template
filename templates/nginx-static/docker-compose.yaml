@@ -1,0 +1,13 @@
+services:
+  nginx:
+    image: nginx:{{image_tag}}
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
+    volumes:
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

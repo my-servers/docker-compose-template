@@ -1,0 +1,10 @@
+[
+  {
+    "id": "nginx-static",
+    "name": "Nginx 静态站点",
+    "description": "快速部署一个可挂载静态目录的 Nginx 服务",
+    "icon": "network",
+    "docker_compose_path": "templates/nginx-static/docker-compose.yaml",
+    "args_path": "templates/nginx-static/args.json"
+  }
+]
