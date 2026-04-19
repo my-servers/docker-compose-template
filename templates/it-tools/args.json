@@ -1,0 +1,25 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "it-tools",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "it-tools"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "IT-Tools Web 页面端口",
+      "placeholder": "8080",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "8080"
+    }
+  ],
+  "groups": []
+}

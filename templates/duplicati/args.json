@@ -1,0 +1,75 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "duplicati",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "duplicati"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "Duplicati Web 页面端口",
+      "placeholder": "8200",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "8200"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Duplicati 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    },
+    {
+      "key": "backups_dir",
+      "label": "备份目录",
+      "description": "备份文件存放目录",
+      "placeholder": "./backups",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./backups"
+    },
+    {
+      "key": "source_dir",
+      "label": "源目录",
+      "description": "需要备份的源目录",
+      "placeholder": "./source",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./source"
+    }
+  ],
+  "groups": []
+}

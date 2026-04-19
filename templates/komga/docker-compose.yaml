@@ -1,0 +1,13 @@
+services:
+  komga:
+    image: gotson/komga:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:25600"
+    volumes:
+      - {{config_dir}}:/config
+      - {{data_dir}}:/data
+    environment:
+      - PUID={{puid}}
+      - PGID={{pgid}}

@@ -1,0 +1,16 @@
+services:
+  syncthing:
+    image: lscr.io/linuxserver/syncthing:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - TZ=Asia/Shanghai
+    ports:
+      - "{{http_port}}:8384"
+      - "22000:22000"
+      - "22000:22000/udp"
+    volumes:
+      - {{config_dir}}:/config
+      - {{data_dir}}:/data

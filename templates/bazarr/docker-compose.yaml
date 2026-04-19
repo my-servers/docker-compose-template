@@ -1,0 +1,15 @@
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - TZ=Asia/Shanghai
+    ports:
+      - "{{http_port}}:6767"
+    volumes:
+      - {{config_dir}}:/config
+      - {{movies_dir}}:/movies
+      - {{tv_dir}}:/tv

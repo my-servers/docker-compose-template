@@ -1,0 +1,13 @@
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - TZ=Asia/Shanghai
+    ports:
+      - "{{http_port}}:9117"
+    volumes:
+      - {{config_dir}}:/config

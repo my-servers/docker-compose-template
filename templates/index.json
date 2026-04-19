@@ -206,5 +206,125 @@
     "icon": "https://www.google.com/s2/favicons?domain=gethomepage.dev&sz=128",
     "docker_compose_path": "templates/homepage/docker-compose.yaml",
     "args_path": "templates/homepage/args.json"
+  },
+  {
+    "id": "vaultwarden",
+    "name": "Vaultwarden",
+    "description": "开源密码管理器，支持多设备同步",
+    "icon": "https://www.google.com/s2/favicons?domain=bitwarden.com&sz=128",
+    "docker_compose_path": "templates/vaultwarden/docker-compose.yaml",
+    "args_path": "templates/vaultwarden/args.json"
+  },
+  {
+    "id": "uptime-kuma",
+    "name": "Uptime Kuma",
+    "description": "自建网站监控工具，支持宕机告警",
+    "icon": "https://www.google.com/s2/favicons?domain=kuma.pet&sz=128",
+    "docker_compose_path": "templates/uptime-kuma/docker-compose.yaml",
+    "args_path": "templates/uptime-kuma/args.json"
+  },
+  {
+    "id": "it-tools",
+    "name": "IT-Tools",
+    "description": "开发者工具集合，包含80+常用小工具",
+    "icon": "https://www.google.com/s2/favicons?domain=corentin-thomasset.fr&sz=128",
+    "docker_compose_path": "templates/it-tools/docker-compose.yaml",
+    "args_path": "templates/it-tools/args.json"
+  },
+  {
+    "id": "jackett",
+    "name": "Jackett",
+    "description": "索引器聚合服务，支持 Torznab API",
+    "icon": "https://www.google.com/s2/favicons?domain=jackett.io&sz=128",
+    "docker_compose_path": "templates/jackett/docker-compose.yaml",
+    "args_path": "templates/jackett/args.json"
+  },
+  {
+    "id": "heimdall",
+    "name": "Heimdall",
+    "description": "应用导航首页，支持自定义图标",
+    "icon": "https://www.google.com/s2/favicons?domain=heimdall.site&sz=128",
+    "docker_compose_path": "templates/heimdall/docker-compose.yaml",
+    "args_path": "templates/heimdall/args.json"
+  },
+  {
+    "id": "komga",
+    "name": "Komga",
+    "description": "漫画和电子书服务器，支持OPDS",
+    "icon": "https://www.google.com/s2/favicons?domain=komga.org&sz=128",
+    "docker_compose_path": "templates/komga/docker-compose.yaml",
+    "args_path": "templates/komga/args.json"
+  },
+  {
+    "id": "lidarr",
+    "name": "Lidarr",
+    "description": "音乐自动化管理服务",
+    "icon": "https://www.google.com/s2/favicons?domain=lidarr.audio&sz=128",
+    "docker_compose_path": "templates/lidarr/docker-compose.yaml",
+    "args_path": "templates/lidarr/args.json"
+  },
+  {
+    "id": "overseerr",
+    "name": "Overseerr",
+    "description": "影视媒体请求管理服务",
+    "icon": "https://www.google.com/s2/favicons?domain=overseerr.io&sz=128",
+    "docker_compose_path": "templates/overseerr/docker-compose.yaml",
+    "args_path": "templates/overseerr/args.json"
+  },
+  {
+    "id": "bazarr",
+    "name": "Bazarr",
+    "description": "字幕自动下载服务",
+    "icon": "https://www.google.com/s2/favicons?domain=bazarr.tv&sz=128",
+    "docker_compose_path": "templates/bazarr/docker-compose.yaml",
+    "args_path": "templates/bazarr/args.json"
+  },
+  {
+    "id": "tautulli",
+    "name": "Tautulli",
+    "description": "媒体播放统计和监控",
+    "icon": "https://www.google.com/s2/favicons?domain=tautulli.com&sz=128",
+    "docker_compose_path": "templates/tautulli/docker-compose.yaml",
+    "args_path": "templates/tautulli/args.json"
+  },
+  {
+    "id": "flaresolverr",
+    "name": "Flaresolverr",
+    "description": "Cloudflare绕过服务",
+    "icon": "https://www.google.com/s2/favicons?domain=flareSolverr.io&sz=128",
+    "docker_compose_path": "templates/flaresolverr/docker-compose.yaml",
+    "args_path": "templates/flaresolverr/args.json"
+  },
+  {
+    "id": "syncthing",
+    "name": "Syncthing",
+    "description": "文件同步服务，支持多设备",
+    "icon": "https://www.google.com/s2/favicons?domain=syncthing.net&sz=128",
+    "docker_compose_path": "templates/syncthing/docker-compose.yaml",
+    "args_path": "templates/syncthing/args.json"
+  },
+  {
+    "id": "duplicati",
+    "name": "Duplicati",
+    "description": "增量备份服务，支持加密",
+    "icon": "https://www.google.com/s2/favicons?domain=duplicati.com&sz=128",
+    "docker_compose_path": "templates/duplicati/docker-compose.yaml",
+    "args_path": "templates/duplicati/args.json"
+  },
+  {
+    "id": "freshrss",
+    "name": "FreshRSS",
+    "description": "RSS订阅阅读器",
+    "icon": "https://www.google.com/s2/favicons?domain=freshrss.org&sz=128",
+    "docker_compose_path": "templates/freshrss/docker-compose.yaml",
+    "args_path": "templates/freshrss/args.json"
+  },
+  {
+    "id": "gotify",
+    "name": "Gotify",
+    "description": "自建消息推送服务",
+    "icon": "https://www.google.com/s2/favicons?domain=gotify.net&sz=128",
+    "docker_compose_path": "templates/gotify/docker-compose.yaml",
+    "args_path": "templates/gotify/args.json"
   }
 ]
