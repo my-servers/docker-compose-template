@@ -1,0 +1,16 @@
+services:
+  bookstack:
+    image: solidnerd/bookstack:25.01
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:80"
+    volumes:
+      - {{data_dir}}:/var/www/bookstack/public/uploads
+      - {{db_dir}}:/var/www/bookstack/database
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOST=localhost
+      - DB_DATABASE=bookstack
+      - DB_USERNAME=bookstack
+      - DB_PASSWORD=bookstack

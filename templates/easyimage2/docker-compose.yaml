@@ -1,0 +1,11 @@
+services:
+  easyimage2:
+    image: ddsderek/easyimage:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:8080"
+    volumes:
+      - {{data_dir}}:/var/www/html
+    environment:
+      - TZ=Asia/Shanghai

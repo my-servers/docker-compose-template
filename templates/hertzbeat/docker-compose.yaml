@@ -1,0 +1,12 @@
+services:
+  hertzbeat:
+    image: hertzbeat/hertzbeat:{{version}}
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:1158"
+    volumes:
+      - {{data_dir}}:/opt/hertzbeat-data
+    environment:
+      - TZ=Asia/Shanghai
+      - DATABASE_TYPE=sqlite

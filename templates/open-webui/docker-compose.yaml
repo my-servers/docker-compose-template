@@ -1,0 +1,11 @@
+services:
+  open-webui:
+    image: ghcr.io/openwebui/open-webui:main
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:8080"
+    volumes:
+      - {{data_dir}}:/app/backend/data
+    environment:
+      - TZ=Asia/Shanghai

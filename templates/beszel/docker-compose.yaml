@@ -1,0 +1,11 @@
+services:
+  beszel:
+    image: henrygd/beszel:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:8090"
+    volumes:
+      - {{data_dir}}:/beszel/data
+    environment:
+      - TZ=Asia/Shanghai

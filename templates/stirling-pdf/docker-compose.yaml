@@ -1,0 +1,11 @@
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:8080"
+    volumes:
+      - {{data_dir}}:/customFiles/stirlingserver
+    environment:
+      - TZ=Asia/Shanghai

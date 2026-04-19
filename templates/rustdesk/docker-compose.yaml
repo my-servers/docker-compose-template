@@ -1,0 +1,12 @@
+services:
+  rustdesk-server:
+    image: rustdesk/rustdesk-server:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{rpc_port}}:21114"
+      - "{{relay_port}}:21116"
+      - "{{api_port}}:21116"
+    volumes:
+      - {{data_dir}}:/data
+    command: server

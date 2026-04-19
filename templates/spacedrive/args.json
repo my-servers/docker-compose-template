@@ -1,0 +1,35 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "spacedrive",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "spacedrive"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "Spacedrive Web 页面端口",
+      "placeholder": "8080",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "8080"
+    },
+    {
+      "key": "data_dir",
+      "label": "数据目录",
+      "description": "Spacedrive 数据目录",
+      "placeholder": "./data",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./data"
+    }
+  ],
+  "groups": []
+}

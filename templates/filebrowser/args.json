@@ -1,0 +1,45 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "filebrowser",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "filebrowser"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "FileBrowser Web 页面端口",
+      "placeholder": "8080",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "8080"
+    },
+    {
+      "key": "data_dir",
+      "label": "文件目录",
+      "description": "文件目录",
+      "placeholder": "./files",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./files"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "FileBrowser 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    }
+  ],
+  "groups": []
+}

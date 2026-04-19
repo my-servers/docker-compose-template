@@ -1,0 +1,12 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:8080"
+    volumes:
+      - {{data_dir}}:/srv
+      - {{config_dir}}:/config
+    environment:
+      - TZ=Asia/Shanghai

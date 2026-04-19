@@ -1,0 +1,11 @@
+services:
+  affine:
+    image: ghcr.io/affineworkspace/affine:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:3000"
+    volumes:
+      - {{data_dir}}:/app/data
+    environment:
+      - TZ=Asia/Shanghai

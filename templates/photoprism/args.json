@@ -1,0 +1,55 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "photoprism",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "photoprism"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "PhotoPrism Web 页面端口",
+      "placeholder": "2342",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "2342"
+    },
+    {
+      "key": "admin_password",
+      "label": "管理员密码",
+      "description": "管理员密码",
+      "placeholder": "photoprism",
+      "value_type": "string",
+      "input": "password",
+      "required": true,
+      "default_value": "photoprism"
+    },
+    {
+      "key": "storage_dir",
+      "label": "存储目录",
+      "description": "PhotoPrism 存储目录",
+      "placeholder": "./storage",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./storage"
+    },
+    {
+      "key": "photos_dir",
+      "label": "照片目录",
+      "description": "照片目录",
+      "placeholder": "./photos",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./photos"
+    }
+  ],
+  "groups": []
+}

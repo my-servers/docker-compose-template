@@ -1,0 +1,11 @@
+services:
+  spacedrive:
+    image: ghcr.io/spacedriveapp/spacedrive:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:8080"
+    volumes:
+      - {{data_dir}}:/data
+    environment:
+      - TZ=Asia/Shanghai

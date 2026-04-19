@@ -1,0 +1,14 @@
+services:
+  photoprism:
+    image: photoprism/photoprism:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    ports:
+      - "{{http_port}}:2342"
+    volumes:
+      - {{storage_dir}}:/photoprism/storage
+      - {{photos_dir}}:/photoprism/photos
+    environment:
+      - TZ=Asia/Shanghai
+      - PHOTOPRISM_ADMIN_USER=admin
+      - PHOTOPRISM_ADMIN_PASSWORD={{admin_password}}
