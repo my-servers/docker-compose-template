@@ -1,0 +1,25 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "lucky",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "lucky"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Lucky 配置目录",
+      "placeholder": "./luckyconf",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./luckyconf"
+    }
+  ],
+  "groups": []
+}

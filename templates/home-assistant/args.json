@@ -1,0 +1,35 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "home-assistant",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "home-assistant"
+    },
+    {
+      "key": "timezone",
+      "label": "时区",
+      "description": "容器运行时区",
+      "placeholder": "Asia/Shanghai",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "Asia/Shanghai"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Home Assistant 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    }
+  ],
+  "groups": []
+}

@@ -7,3 +7,11 @@ MyServers docker compose template repository.
 - `templates/index.json`: template registry
 - `templates/<id>/docker-compose.yaml`: compose template
 - `templates/<id>/args.json`: args schema and repeatable groups
+
+## Generate
+
+Use the local generator when adding or updating templates:
+
+```bash
+node generate-templates.mjs
+```

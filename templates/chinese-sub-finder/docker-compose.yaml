@@ -1,0 +1,14 @@
+services:
+  chinese-sub-finder:
+    image: allanpk716/chinesesubfinder:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - TZ={{timezone}}
+      - PUID={{puid}}
+      - PGID={{pgid}}
+    ports:
+      - "{{http_port}}:19035"
+    volumes:
+      - {{config_dir}}:/config
+      - {{media_dir}}:/media

@@ -1,0 +1,45 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "cloudreve",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "cloudreve"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "Cloudreve Web 页面端口",
+      "placeholder": 5212,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "5212"
+    },
+    {
+      "key": "uploads_dir",
+      "label": "上传目录",
+      "description": "用户上传文件目录",
+      "placeholder": "./uploads",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./uploads"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Cloudreve 配置与数据库目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    }
+  ],
+  "groups": []
+}

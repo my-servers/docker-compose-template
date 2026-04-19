@@ -1,0 +1,55 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "alist",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "alist"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "AList Web 页面端口",
+      "placeholder": 5244,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "5244"
+    },
+    {
+      "key": "data_dir",
+      "label": "数据目录",
+      "description": "AList 数据目录",
+      "placeholder": "./data",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./data"
+    }
+  ],
+  "groups": []
+}

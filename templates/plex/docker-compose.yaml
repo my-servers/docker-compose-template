@@ -1,0 +1,16 @@
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TZ={{timezone}}
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - VERSION=docker
+      - PLEX_CLAIM={{plex_claim}}
+    volumes:
+      - {{config_dir}}:/config
+      - {{transcode_dir}}:/transcode
+      - {{media_dir}}:/media

@@ -1,0 +1,25 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "ddns-go",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "ddns-go"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "ddns-go 配置目录",
+      "placeholder": "./data",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./data"
+    }
+  ],
+  "groups": []
+}

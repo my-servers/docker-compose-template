@@ -1,0 +1,45 @@
+{
+  "schema": [
+    {
+      "key": "timezone",
+      "label": "时区",
+      "description": "容器运行时区",
+      "placeholder": "Asia/Shanghai",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "Asia/Shanghai"
+    },
+    {
+      "key": "mount_dir",
+      "label": "挂载目录",
+      "description": "接受网盘挂载结果的宿主机目录",
+      "placeholder": "./CloudNAS",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./CloudNAS"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "CloudDrive2 配置目录",
+      "placeholder": "./Config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./Config"
+    },
+    {
+      "key": "media_dir",
+      "label": "媒体共享目录",
+      "description": "可选的本地媒体共享目录",
+      "placeholder": "./media",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./media"
+    }
+  ],
+  "groups": []
+}

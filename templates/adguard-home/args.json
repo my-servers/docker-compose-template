@@ -1,0 +1,35 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "adguard-home",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "adguard-home"
+    },
+    {
+      "key": "work_dir",
+      "label": "工作目录",
+      "description": "AdGuard Home 工作目录",
+      "placeholder": "./work",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./work"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "AdGuard Home 配置目录",
+      "placeholder": "./conf",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./conf"
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,75 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "chinese-sub-finder",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "chinese-sub-finder"
+    },
+    {
+      "key": "timezone",
+      "label": "时区",
+      "description": "容器运行时区",
+      "placeholder": "Asia/Shanghai",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "Asia/Shanghai"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "ChineseSubFinder Web 页面端口",
+      "placeholder": 19035,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "19035"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "ChineseSubFinder 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    },
+    {
+      "key": "media_dir",
+      "label": "媒体目录",
+      "description": "需要扫描字幕的媒体目录",
+      "placeholder": "./media",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./media"
+    }
+  ],
+  "groups": []
+}

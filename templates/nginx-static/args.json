@@ -3,7 +3,7 @@
     {
       "key": "image_tag",
       "label": "镜像标签",
-      "description": "例如 stable、1.27-alpine",
+      "description": "Nginx 镜像标签",
       "placeholder": "stable",
       "value_type": "string",
       "input": "text",
@@ -13,7 +13,7 @@
     {
       "key": "container_name",
       "label": "容器名称",
-      "description": "用于 docker 容器命名",
+      "description": "Docker 容器名称",
       "placeholder": "nginx-static",
       "value_type": "string",
       "input": "text",
@@ -33,7 +33,7 @@
           "key": "host",
           "label": "宿主机端口",
           "description": "暴露到宿主机的端口",
-          "placeholder": "8080",
+          "placeholder": 8080,
           "value_type": "number",
           "input": "number",
           "required": true,
@@ -43,7 +43,7 @@
           "key": "container",
           "label": "容器端口",
           "description": "容器内部监听端口",
-          "placeholder": "80",
+          "placeholder": 80,
           "value_type": "number",
           "input": "number",
           "required": true,
@@ -52,14 +52,20 @@
         {
           "key": "protocol",
           "label": "协议",
-          "description": "端口映射协议",
+          "description": "端口协议",
           "value_type": "string",
           "input": "select",
           "required": true,
           "default_value": "tcp",
           "options": [
-            { "label": "TCP", "value": "tcp" },
-            { "label": "UDP", "value": "udp" }
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
           ]
         }
       ],
@@ -70,7 +76,7 @@
               "key": "host",
               "label": "宿主机端口",
               "description": "暴露到宿主机的端口",
-              "placeholder": "8080",
+              "placeholder": 8080,
               "value_type": "number",
               "input": "number",
               "required": true,
@@ -80,7 +86,7 @@
               "key": "container",
               "label": "容器端口",
               "description": "容器内部监听端口",
-              "placeholder": "80",
+              "placeholder": 80,
               "value_type": "number",
               "input": "number",
               "required": true,
@@ -89,14 +95,20 @@
             {
               "key": "protocol",
               "label": "协议",
-              "description": "端口映射协议",
+              "description": "端口协议",
               "value_type": "string",
               "input": "select",
               "required": true,
               "default_value": "tcp",
               "options": [
-                { "label": "TCP", "value": "tcp" },
-                { "label": "UDP", "value": "udp" }
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
               ]
             }
           ]
@@ -113,7 +125,7 @@
         {
           "key": "source",
           "label": "宿主机目录",
-          "description": "宿主机上的静态文件目录",
+          "description": "宿主机目录路径",
           "placeholder": "./html",
           "value_type": "string",
           "input": "path",
@@ -123,7 +135,7 @@
         {
           "key": "target",
           "label": "容器目录",
-          "description": "挂载到容器内的路径",
+          "description": "容器内目录路径",
           "placeholder": "/usr/share/nginx/html",
           "value_type": "string",
           "input": "path",
@@ -139,8 +151,14 @@
           "required": true,
           "default_value": "ro",
           "options": [
-            { "label": "只读", "value": "ro" },
-            { "label": "读写", "value": "rw" }
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
           ]
         }
       ],
@@ -150,7 +168,7 @@
             {
               "key": "source",
               "label": "宿主机目录",
-              "description": "宿主机上的静态文件目录",
+              "description": "宿主机目录路径",
               "placeholder": "./html",
               "value_type": "string",
               "input": "path",
@@ -160,7 +178,7 @@
             {
               "key": "target",
               "label": "容器目录",
-              "description": "挂载到容器内的路径",
+              "description": "容器内目录路径",
               "placeholder": "/usr/share/nginx/html",
               "value_type": "string",
               "input": "path",
@@ -176,8 +194,14 @@
               "required": true,
               "default_value": "ro",
               "options": [
-                { "label": "只读", "value": "ro" },
-                { "label": "读写", "value": "rw" }
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
               ]
             }
           ]

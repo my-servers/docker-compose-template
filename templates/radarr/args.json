@@ -1,0 +1,85 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "radarr",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "radarr"
+    },
+    {
+      "key": "timezone",
+      "label": "时区",
+      "description": "容器运行时区",
+      "placeholder": "Asia/Shanghai",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "Asia/Shanghai"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "Radarr Web 页面端口",
+      "placeholder": 7878,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "7878"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Radarr 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    },
+    {
+      "key": "movies_dir",
+      "label": "电影目录",
+      "description": "电影媒体目录",
+      "placeholder": "./movies",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./movies"
+    },
+    {
+      "key": "downloads_dir",
+      "label": "下载目录",
+      "description": "下载器共享目录",
+      "placeholder": "./downloads",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./downloads"
+    }
+  ],
+  "groups": []
+}

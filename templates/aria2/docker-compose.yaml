@@ -1,0 +1,15 @@
+services:
+  aria2:
+    image: p3terx/aria2-pro:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - TZ={{timezone}}
+      - RPC_SECRET={{rpc_secret}}
+    ports:
+      - "{{rpc_port}}:6800"
+      - "6888:6888"
+      - "6888:6888/udp"
+    volumes:
+      - {{config_dir}}:/config
+      - {{downloads_dir}}:/downloads

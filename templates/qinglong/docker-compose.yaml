@@ -1,0 +1,11 @@
+services:
+  qinglong:
+    image: whyour/qinglong:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - TZ={{timezone}}
+    ports:
+      - "{{http_port}}:5700"
+    volumes:
+      - {{data_dir}}:/ql/data

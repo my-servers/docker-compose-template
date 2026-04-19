@@ -1,0 +1,16 @@
+services:
+  moviepilot:
+    image: jxxghp/moviepilot:latest
+    container_name: {{container_name}}
+    restart: unless-stopped
+    environment:
+      - TZ={{timezone}}
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - NGINX_PORT={{http_port}}
+    ports:
+      - "{{http_port}}:3000"
+    volumes:
+      - {{config_dir}}:/config
+      - {{media_dir}}:/media
+      - {{downloads_dir}}:/downloads

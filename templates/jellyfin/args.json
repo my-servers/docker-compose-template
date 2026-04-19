@@ -1,0 +1,85 @@
+{
+  "schema": [
+    {
+      "key": "container_name",
+      "label": "容器名称",
+      "description": "Docker 容器名称",
+      "placeholder": "jellyfin",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "jellyfin"
+    },
+    {
+      "key": "timezone",
+      "label": "时区",
+      "description": "容器运行时区",
+      "placeholder": "Asia/Shanghai",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "Asia/Shanghai"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID，群晖/飞牛常见为 1000",
+      "placeholder": 1000,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "Jellyfin HTTP 访问端口",
+      "placeholder": 8096,
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "8096"
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "Jellyfin 配置目录",
+      "placeholder": "./config",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./config"
+    },
+    {
+      "key": "cache_dir",
+      "label": "缓存目录",
+      "description": "Jellyfin 缓存目录",
+      "placeholder": "./cache",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./cache"
+    },
+    {
+      "key": "media_dir",
+      "label": "媒体目录",
+      "description": "影视资源目录",
+      "placeholder": "./media",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./media"
+    }
+  ],
+  "groups": []
+}
