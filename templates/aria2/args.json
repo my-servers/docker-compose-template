@@ -24,7 +24,7 @@
       "key": "rpc_port",
       "label": "RPC 端口",
       "description": "Aria2 RPC 端口",
-      "placeholder": 6800,
+      "placeholder": "6800",
       "value_type": "number",
       "input": "number",
       "required": true,

@@ -19,7 +19,7 @@ const numberField = (key, label, description, defaultValue, placeholder = defaul
   key,
   label,
   description,
-  placeholder,
+  placeholder: String(placeholder),
   value_type: 'number',
   input: 'number',
   required,
