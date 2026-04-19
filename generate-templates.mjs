@@ -34,6 +34,7 @@ const puidField = () => numberField('puid', 'PUID', '宿主机用户 ID，群晖
 const pgidField = () => numberField('pgid', 'PGID', '宿主机用户组 ID，群晖/飞牛常见为 1000', 1000);
 const containerField = (value) => stringField('container_name', '容器名称', 'Docker 容器名称', value);
 const portField = (key, label, description, value) => numberField(key, label, description, value);
+const favicon = (domain) => `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 
 const portMapFields = (hostDefault, containerDefault, protocolDefault = 'tcp', hostLabel = '宿主机端口', containerLabel = '容器端口') => [
   numberField('host', hostLabel, '暴露到宿主机的端口', hostDefault),
@@ -104,7 +105,7 @@ const templates = [
     id: 'nginx-static',
     name: 'Nginx 静态站点',
     description: '快速部署一个可挂载静态目录的 Nginx 服务',
-    icon: 'network',
+    icon: favicon('nginx.org'),
     args: {
       schema: [
         stringField('image_tag', '镜像标签', 'Nginx 镜像标签', 'stable'),
@@ -140,7 +141,7 @@ const templates = [
     id: 'portainer',
     name: 'Portainer',
     description: 'Docker 图形化管理面板，适合先部署后统一管理其它容器',
-    icon: 'server.rack',
+    icon: favicon('portainer.io'),
     args: {
       schema: [
         containerField('portainer'),
@@ -167,7 +168,7 @@ const templates = [
     id: 'adguard-home',
     name: 'AdGuard Home',
     description: '全家设备可用的广告拦截与 DNS 服务，默认使用 host 网络降低配置成本',
-    icon: 'shield.lefthalf.filled',
+    icon: favicon('adguard.com'),
     args: {
       schema: [
         containerField('adguard-home'),
@@ -191,7 +192,7 @@ const templates = [
     id: 'qbittorrent',
     name: 'qBittorrent',
     description: '常用下载器模板，默认带 WebUI 与 BT 端口',
-    icon: 'arrow.down.circle',
+    icon: favicon('qbittorrent.org'),
     args: {
       schema: [
         containerField('qbittorrent'),
@@ -227,7 +228,7 @@ const templates = [
     id: 'jellyfin',
     name: 'Jellyfin',
     description: '开源影音媒体库，默认提供 HTTP 访问与媒体目录挂载',
-    icon: 'play.tv',
+    icon: favicon('jellyfin.org'),
     args: {
       schema: [
         containerField('jellyfin'),
@@ -262,7 +263,7 @@ const templates = [
     id: 'plex',
     name: 'Plex',
     description: 'Plex 媒体库，默认使用 host 网络，适合局域网即装即用',
-    icon: 'sparkles.tv',
+    icon: favicon('plex.tv'),
     args: {
       schema: [
         containerField('plex'),
@@ -298,7 +299,7 @@ const templates = [
     id: 'immich',
     name: 'Immich',
     description: '照片备份与管理服务，内置 Redis 和 Postgres 依赖，适合一键起完整栈',
-    icon: 'photo.on.rectangle',
+    icon: favicon('immich.app'),
     args: {
       schema: [
         containerField('immich-server'),
@@ -352,7 +353,7 @@ const templates = [
     id: 'home-assistant',
     name: 'Home Assistant',
     description: '智能家居中枢，默认 host 网络与特权模式，减少发现设备的配置成本',
-    icon: 'house',
+    icon: favicon('home-assistant.io'),
     args: {
       schema: [
         containerField('home-assistant'),
@@ -378,7 +379,7 @@ const templates = [
     id: 'sonarr',
     name: 'Sonarr',
     description: '电视剧自动化管理服务，适合配合下载器一起使用',
-    icon: 'tv',
+    icon: favicon('sonarr.tv'),
     args: {
       schema: [
         containerField('sonarr'),
@@ -413,7 +414,7 @@ const templates = [
     id: 'radarr',
     name: 'Radarr',
     description: '电影自动化管理服务，适合配合下载器一起使用',
-    icon: 'film',
+    icon: favicon('radarr.video'),
     args: {
       schema: [
         containerField('radarr'),
@@ -448,7 +449,7 @@ const templates = [
     id: 'prowlarr',
     name: 'Prowlarr',
     description: '索引器聚合管理服务，可统一给 Sonarr、Radarr 等提供索引源',
-    icon: 'dot.radiowaves.left.and.right',
+    icon: favicon('prowlarr.com'),
     args: {
       schema: [
         containerField('prowlarr'),
@@ -478,8 +479,8 @@ const templates = [
   {
     id: 'emby',
     name: 'Emby',
-    description: '中文 NAS 圈常见的影音媒体库方案',
-    icon: 'play.rectangle',
+    description: '影音媒体库服务，适合整理和播放本地媒体内容',
+    icon: favicon('emby.media'),
     args: {
       schema: [
         containerField('emby'),
@@ -513,8 +514,8 @@ const templates = [
   {
     id: 'alist',
     name: 'AList',
-    description: '中国 NAS 用户常用的网盘聚合与文件列表服务',
-    icon: 'folder',
+    description: '网盘聚合与文件列表服务，适合统一管理多种存储源',
+    icon: favicon('alistgo.com'),
     args: {
       schema: [
         containerField('alist'),
@@ -543,8 +544,8 @@ const templates = [
   {
     id: 'moviepilot',
     name: 'MoviePilot',
-    description: '中文影视自动化管理服务，适合与下载器和媒体库联动',
-    icon: 'sparkles',
+    description: '影视自动化管理服务，适合与下载器和媒体库联动',
+    icon: favicon('movie-pilot.org'),
     args: {
       schema: [
         containerField('moviepilot'),
@@ -579,7 +580,7 @@ const templates = [
   {
     id: 'chinese-sub-finder',
     name: 'ChineseSubFinder',
-    description: '自动下载中文字幕，中文影视用户常见增强组件',
+    description: '自动下载和整理字幕的增强组件',
     icon: 'captions.bubble',
     args: {
       schema: [
@@ -612,7 +613,7 @@ const templates = [
   {
     id: 'qinglong',
     name: '青龙',
-    description: '中文 NAS 用户常用的定时任务与脚本面板',
+    description: '定时任务与脚本面板，适合统一管理自动化脚本',
     icon: 'terminal',
     args: {
       schema: [
@@ -639,8 +640,8 @@ const templates = [
   {
     id: 'lucky',
     name: 'Lucky',
-    description: '中文 NAS 常用的 DDNS、反代与内网穿透工具，默认 host 网络',
-    icon: 'wand.and.rays',
+    description: 'DDNS、反向代理与内网穿透工具，默认 host 网络',
+    icon: favicon('lucky666.cn'),
     args: {
       schema: [
         containerField('lucky'),
@@ -662,7 +663,7 @@ const templates = [
     id: 'ddns-go',
     name: 'ddns-go',
     description: '轻量级 DDNS 服务，默认 host 网络并直接暴露管理界面',
-    icon: 'globe.asia.australia',
+    icon: favicon('ddns-go.com'),
     args: {
       schema: [
         containerField('ddns-go'),
@@ -684,7 +685,7 @@ const templates = [
     id: 'cloudreve',
     name: 'Cloudreve',
     description: '自建网盘与分享服务，默认使用内置 SQLite 模式降低部署成本',
-    icon: 'icloud',
+    icon: favicon('cloudreve.org'),
     args: {
       schema: [
         containerField('cloudreve'),
@@ -709,7 +710,7 @@ const templates = [
   {
     id: 'clouddrive2',
     name: 'CloudDrive2',
-    description: '中文用户常用的网盘挂载工具，需宿主机支持 FUSE 与共享挂载',
+    description: '网盘挂载工具，需宿主机支持 FUSE 与共享挂载',
     icon: 'externaldrive.connected.to.line.below',
     args: {
       schema: [
