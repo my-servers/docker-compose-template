@@ -1,21 +1,5 @@
 [
   {
-    "id": "nginx-static",
-    "name": "Nginx 静态站点",
-    "description": "快速部署一个可挂载静态目录的 Nginx 服务",
-    "icon": "https://www.google.com/s2/favicons?domain=nginx.org&sz=128",
-    "docker_compose_path": "templates/nginx-static/docker-compose.yaml",
-    "args_path": "templates/nginx-static/args.json"
-  },
-  {
-    "id": "portainer",
-    "name": "Portainer",
-    "description": "Docker 图形化管理面板，适合先部署后统一管理其它容器",
-    "icon": "https://www.google.com/s2/favicons?domain=portainer.io&sz=128",
-    "docker_compose_path": "templates/portainer/docker-compose.yaml",
-    "args_path": "templates/portainer/args.json"
-  },
-  {
     "id": "adguard-home",
     "name": "AdGuard Home",
     "description": "全家设备可用的广告拦截与 DNS 服务，默认使用 host 网络降低配置成本",
@@ -24,76 +8,12 @@
     "args_path": "templates/adguard-home/args.json"
   },
   {
-    "id": "qbittorrent",
-    "name": "qBittorrent",
-    "description": "常用下载器模板，默认带 WebUI 与 BT 端口",
-    "icon": "https://www.google.com/s2/favicons?domain=qbittorrent.org&sz=128",
-    "docker_compose_path": "templates/qbittorrent/docker-compose.yaml",
-    "args_path": "templates/qbittorrent/args.json"
-  },
-  {
-    "id": "jellyfin",
-    "name": "Jellyfin",
-    "description": "开源影音媒体库，默认提供 HTTP 访问与媒体目录挂载",
-    "icon": "https://www.google.com/s2/favicons?domain=jellyfin.org&sz=128",
-    "docker_compose_path": "templates/jellyfin/docker-compose.yaml",
-    "args_path": "templates/jellyfin/args.json"
-  },
-  {
-    "id": "plex",
-    "name": "Plex",
-    "description": "Plex 媒体库，默认使用 host 网络，适合局域网即装即用",
-    "icon": "https://www.google.com/s2/favicons?domain=plex.tv&sz=128",
-    "docker_compose_path": "templates/plex/docker-compose.yaml",
-    "args_path": "templates/plex/args.json"
-  },
-  {
-    "id": "immich",
-    "name": "Immich",
-    "description": "照片备份与管理服务，内置 Redis 和 Postgres 依赖，适合一键起完整栈",
-    "icon": "https://www.google.com/s2/favicons?domain=immich.app&sz=128",
-    "docker_compose_path": "templates/immich/docker-compose.yaml",
-    "args_path": "templates/immich/args.json"
-  },
-  {
-    "id": "home-assistant",
-    "name": "Home Assistant",
-    "description": "智能家居中枢，默认 host 网络与特权模式，减少发现设备的配置成本",
-    "icon": "https://www.google.com/s2/favicons?domain=home-assistant.io&sz=128",
-    "docker_compose_path": "templates/home-assistant/docker-compose.yaml",
-    "args_path": "templates/home-assistant/args.json"
-  },
-  {
-    "id": "sonarr",
-    "name": "Sonarr",
-    "description": "电视剧自动化管理服务，适合配合下载器一起使用",
-    "icon": "https://www.google.com/s2/favicons?domain=sonarr.tv&sz=128",
-    "docker_compose_path": "templates/sonarr/docker-compose.yaml",
-    "args_path": "templates/sonarr/args.json"
-  },
-  {
-    "id": "radarr",
-    "name": "Radarr",
-    "description": "电影自动化管理服务，适合配合下载器一起使用",
-    "icon": "https://www.google.com/s2/favicons?domain=radarr.video&sz=128",
-    "docker_compose_path": "templates/radarr/docker-compose.yaml",
-    "args_path": "templates/radarr/args.json"
-  },
-  {
-    "id": "prowlarr",
-    "name": "Prowlarr",
-    "description": "索引器聚合管理服务，可统一给 Sonarr、Radarr 等提供索引源",
-    "icon": "https://www.google.com/s2/favicons?domain=prowlarr.com&sz=128",
-    "docker_compose_path": "templates/prowlarr/docker-compose.yaml",
-    "args_path": "templates/prowlarr/args.json"
-  },
-  {
-    "id": "emby",
-    "name": "Emby",
-    "description": "影音媒体库服务，适合整理和播放本地媒体内容",
-    "icon": "https://www.google.com/s2/favicons?domain=emby.media&sz=128",
-    "docker_compose_path": "templates/emby/docker-compose.yaml",
-    "args_path": "templates/emby/args.json"
+    "id": "affine",
+    "name": "Affine",
+    "description": "无界白板+文档工具，Notion开源替代",
+    "icon": "https://www.google.com/s2/favicons?domain=affine.pro&sz=128",
+    "docker_compose_path": "templates/affine/docker-compose.yaml",
+    "args_path": "templates/affine/args.json"
   },
   {
     "id": "alist",
@@ -104,172 +24,12 @@
     "args_path": "templates/alist/args.json"
   },
   {
-    "id": "moviepilot",
-    "name": "MoviePilot",
-    "description": "影视自动化管理服务，适合与下载器和媒体库联动",
-    "icon": "https://www.google.com/s2/favicons?domain=movie-pilot.org&sz=128",
-    "docker_compose_path": "templates/moviepilot/docker-compose.yaml",
-    "args_path": "templates/moviepilot/args.json"
-  },
-  {
-    "id": "chinese-sub-finder",
-    "name": "ChineseSubFinder",
-    "description": "自动下载和整理字幕的增强组件",
-    "icon": "captions.bubble",
-    "docker_compose_path": "templates/chinese-sub-finder/docker-compose.yaml",
-    "args_path": "templates/chinese-sub-finder/args.json"
-  },
-  {
-    "id": "qinglong",
-    "name": "青龙",
-    "description": "定时任务与脚本面板，适合统一管理自动化脚本",
-    "icon": "terminal",
-    "docker_compose_path": "templates/qinglong/docker-compose.yaml",
-    "args_path": "templates/qinglong/args.json"
-  },
-  {
-    "id": "lucky",
-    "name": "Lucky",
-    "description": "DDNS、反向代理与内网穿透工具，默认 host 网络",
-    "icon": "https://www.google.com/s2/favicons?domain=lucky666.cn&sz=128",
-    "docker_compose_path": "templates/lucky/docker-compose.yaml",
-    "args_path": "templates/lucky/args.json"
-  },
-  {
-    "id": "ddns-go",
-    "name": "ddns-go",
-    "description": "轻量级 DDNS 服务，默认 host 网络并直接暴露管理界面",
-    "icon": "https://www.google.com/s2/favicons?domain=ddns-go.com&sz=128",
-    "docker_compose_path": "templates/ddns-go/docker-compose.yaml",
-    "args_path": "templates/ddns-go/args.json"
-  },
-  {
-    "id": "cloudreve",
-    "name": "Cloudreve",
-    "description": "自建网盘与分享服务，默认使用内置 SQLite 模式降低部署成本",
-    "icon": "https://www.google.com/s2/favicons?domain=cloudreve.org&sz=128",
-    "docker_compose_path": "templates/cloudreve/docker-compose.yaml",
-    "args_path": "templates/cloudreve/args.json"
-  },
-  {
-    "id": "clouddrive2",
-    "name": "CloudDrive2",
-    "description": "网盘挂载工具，需宿主机支持 FUSE 与共享挂载",
-    "icon": "externaldrive.connected.to.line.below",
-    "docker_compose_path": "templates/clouddrive2/docker-compose.yaml",
-    "args_path": "templates/clouddrive2/args.json"
-  },
-  {
     "id": "aria2",
     "name": "Aria2",
     "description": "轻量级多协议下载器，适合做离线下载与脚本联动",
     "icon": "arrow.down.to.line",
     "docker_compose_path": "templates/aria2/docker-compose.yaml",
     "args_path": "templates/aria2/args.json"
-  },
-  {
-    "id": "nextcloud",
-    "name": "Nextcloud",
-    "description": "私有云盘与办公套件，支持文件、日历、联系人管理",
-    "icon": "https://www.google.com/s2/favicons?domain=nextcloud.com&sz=128",
-    "docker_compose_path": "templates/nextcloud/docker-compose.yaml",
-    "args_path": "templates/nextcloud/args.json"
-  },
-  {
-    "id": "navidrome",
-    "name": "Navidrome",
-    "description": "开源音乐服务器，支持流媒体播放和管理",
-    "icon": "https://www.google.com/s2/favicons?domain=navidrome.org&sz=128",
-    "docker_compose_path": "templates/navidrome/docker-compose.yaml",
-    "args_path": "templates/navidrome/args.json"
-  },
-  {
-    "id": "transmission",
-    "name": "Transmission",
-    "description": "轻量级 BT 下载器，资源占用低",
-    "icon": "https://www.google.com/s2/favicons?domain=transmissionbt.com&sz=128",
-    "docker_compose_path": "templates/transmission/docker-compose.yaml",
-    "args_path": "templates/transmission/args.json"
-  },
-  {
-    "id": "nastools",
-    "name": "NASTools",
-    "description": "影视媒体管理工具，支持自动下载和整理",
-    "icon": "https://www.google.com/s2/favicons?domain=nastool.eu&sz=128",
-    "docker_compose_path": "templates/nastools/docker-compose.yaml",
-    "args_path": "templates/nastools/args.json"
-  },
-  {
-    "id": "homepage",
-    "name": "Homepage",
-    "description": "自建应用导航主页，支持 Docker 状态监控",
-    "icon": "https://www.google.com/s2/favicons?domain=gethomepage.dev&sz=128",
-    "docker_compose_path": "templates/homepage/docker-compose.yaml",
-    "args_path": "templates/homepage/args.json"
-  },
-  {
-    "id": "vaultwarden",
-    "name": "Vaultwarden",
-    "description": "开源密码管理器，支持多设备同步",
-    "icon": "https://www.google.com/s2/favicons?domain=bitwarden.com&sz=128",
-    "docker_compose_path": "templates/vaultwarden/docker-compose.yaml",
-    "args_path": "templates/vaultwarden/args.json"
-  },
-  {
-    "id": "uptime-kuma",
-    "name": "Uptime Kuma",
-    "description": "自建网站监控工具，支持宕机告警",
-    "icon": "https://www.google.com/s2/favicons?domain=kuma.pet&sz=128",
-    "docker_compose_path": "templates/uptime-kuma/docker-compose.yaml",
-    "args_path": "templates/uptime-kuma/args.json"
-  },
-  {
-    "id": "it-tools",
-    "name": "IT-Tools",
-    "description": "开发者工具集合，包含80+常用小工具",
-    "icon": "https://www.google.com/s2/favicons?domain=corentin-thomasset.fr&sz=128",
-    "docker_compose_path": "templates/it-tools/docker-compose.yaml",
-    "args_path": "templates/it-tools/args.json"
-  },
-  {
-    "id": "jackett",
-    "name": "Jackett",
-    "description": "索引器聚合服务，支持 Torznab API",
-    "icon": "https://www.google.com/s2/favicons?domain=jackett.io&sz=128",
-    "docker_compose_path": "templates/jackett/docker-compose.yaml",
-    "args_path": "templates/jackett/args.json"
-  },
-  {
-    "id": "heimdall",
-    "name": "Heimdall",
-    "description": "应用导航首页，支持自定义图标",
-    "icon": "https://www.google.com/s2/favicons?domain=heimdall.site&sz=128",
-    "docker_compose_path": "templates/heimdall/docker-compose.yaml",
-    "args_path": "templates/heimdall/args.json"
-  },
-  {
-    "id": "komga",
-    "name": "Komga",
-    "description": "漫画和电子书服务器，支持OPDS",
-    "icon": "https://www.google.com/s2/favicons?domain=komga.org&sz=128",
-    "docker_compose_path": "templates/komga/docker-compose.yaml",
-    "args_path": "templates/komga/args.json"
-  },
-  {
-    "id": "lidarr",
-    "name": "Lidarr",
-    "description": "音乐自动化管理服务",
-    "icon": "https://www.google.com/s2/favicons?domain=lidarr.audio&sz=128",
-    "docker_compose_path": "templates/lidarr/docker-compose.yaml",
-    "args_path": "templates/lidarr/args.json"
-  },
-  {
-    "id": "overseerr",
-    "name": "Overseerr",
-    "description": "影视媒体请求管理服务",
-    "icon": "https://www.google.com/s2/favicons?domain=overseerr.io&sz=128",
-    "docker_compose_path": "templates/overseerr/docker-compose.yaml",
-    "args_path": "templates/overseerr/args.json"
   },
   {
     "id": "bazarr",
@@ -280,28 +40,60 @@
     "args_path": "templates/bazarr/args.json"
   },
   {
-    "id": "tautulli",
-    "name": "Tautulli",
-    "description": "媒体播放统计和监控",
-    "icon": "https://www.google.com/s2/favicons?domain=tautulli.com&sz=128",
-    "docker_compose_path": "templates/tautulli/docker-compose.yaml",
-    "args_path": "templates/tautulli/args.json"
+    "id": "beszel",
+    "name": "Beszel",
+    "description": "轻量级服务器监控工具",
+    "icon": "https://www.google.com/s2/favicons?domain=beszel.dev&sz=128",
+    "docker_compose_path": "templates/beszel/docker-compose.yaml",
+    "args_path": "templates/beszel/args.json"
   },
   {
-    "id": "flaresolverr",
-    "name": "Flaresolverr",
-    "description": "Cloudflare绕过服务",
-    "icon": "https://www.google.com/s2/favicons?domain=flareSolverr.io&sz=128",
-    "docker_compose_path": "templates/flaresolverr/docker-compose.yaml",
-    "args_path": "templates/flaresolverr/args.json"
+    "id": "bookstack",
+    "name": "BookStack",
+    "description": "团队知识库文档系统",
+    "icon": "https://www.google.com/s2/favicons?domain=bookstackapp.com&sz=128",
+    "docker_compose_path": "templates/bookstack/docker-compose.yaml",
+    "args_path": "templates/bookstack/args.json"
   },
   {
-    "id": "syncthing",
-    "name": "Syncthing",
-    "description": "文件同步服务，支持多设备",
-    "icon": "https://www.google.com/s2/favicons?domain=syncthing.net&sz=128",
-    "docker_compose_path": "templates/syncthing/docker-compose.yaml",
-    "args_path": "templates/syncthing/args.json"
+    "id": "chinese-sub-finder",
+    "name": "ChineseSubFinder",
+    "description": "自动下载和整理字幕的增强组件",
+    "icon": "captions.bubble",
+    "docker_compose_path": "templates/chinese-sub-finder/docker-compose.yaml",
+    "args_path": "templates/chinese-sub-finder/args.json"
+  },
+  {
+    "id": "clouddrive2",
+    "name": "CloudDrive2",
+    "description": "网盘挂载工具，需宿主机支持 FUSE 与共享挂载",
+    "icon": "externaldrive.connected.to.line.below",
+    "docker_compose_path": "templates/clouddrive2/docker-compose.yaml",
+    "args_path": "templates/clouddrive2/args.json"
+  },
+  {
+    "id": "cloudreve",
+    "name": "Cloudreve",
+    "description": "自建网盘与分享服务，默认使用内置 SQLite 模式降低部署成本",
+    "icon": "https://www.google.com/s2/favicons?domain=cloudreve.org&sz=128",
+    "docker_compose_path": "templates/cloudreve/docker-compose.yaml",
+    "args_path": "templates/cloudreve/args.json"
+  },
+  {
+    "id": "ddns-go",
+    "name": "ddns-go",
+    "description": "轻量级 DDNS 服务，默认 host 网络并直接暴露管理界面",
+    "icon": "https://www.google.com/s2/favicons?domain=ddns-go.com&sz=128",
+    "docker_compose_path": "templates/ddns-go/docker-compose.yaml",
+    "args_path": "templates/ddns-go/args.json"
+  },
+  {
+    "id": "dockge",
+    "name": "Dockge",
+    "description": "Docker Compose可视化面板，支持一键部署和管理堆栈",
+    "icon": "https://www.google.com/s2/favicons?domain=dockge.kuma.pet&sz=128",
+    "docker_compose_path": "templates/dockge/docker-compose.yaml",
+    "args_path": "templates/dockge/args.json"
   },
   {
     "id": "duplicati",
@@ -310,6 +102,38 @@
     "icon": "https://www.google.com/s2/favicons?domain=duplicati.com&sz=128",
     "docker_compose_path": "templates/duplicati/docker-compose.yaml",
     "args_path": "templates/duplicati/args.json"
+  },
+  {
+    "id": "easyimage2",
+    "name": "EasyImage2",
+    "description": "轻量级图床程序",
+    "icon": "https://www.google.com/s2/favicons?domain=image.io&sz=128",
+    "docker_compose_path": "templates/easyimage2/docker-compose.yaml",
+    "args_path": "templates/easyimage2/args.json"
+  },
+  {
+    "id": "emby",
+    "name": "Emby",
+    "description": "影音媒体库服务，适合整理和播放本地媒体内容",
+    "icon": "https://www.google.com/s2/favicons?domain=emby.media&sz=128",
+    "docker_compose_path": "templates/emby/docker-compose.yaml",
+    "args_path": "templates/emby/args.json"
+  },
+  {
+    "id": "filebrowser",
+    "name": "FileBrowser",
+    "description": "文件管理工具，支持Web上传下载",
+    "icon": "https://www.google.com/s2/favicons?domain=filebrowser.com&sz=128",
+    "docker_compose_path": "templates/filebrowser/docker-compose.yaml",
+    "args_path": "templates/filebrowser/args.json"
+  },
+  {
+    "id": "flaresolverr",
+    "name": "Flaresolverr",
+    "description": "Cloudflare绕过服务",
+    "icon": "https://www.google.com/s2/favicons?domain=flareSolverr.io&sz=128",
+    "docker_compose_path": "templates/flaresolverr/docker-compose.yaml",
+    "args_path": "templates/flaresolverr/args.json"
   },
   {
     "id": "freshrss",
@@ -328,76 +152,20 @@
     "args_path": "templates/gotify/args.json"
   },
   {
-    "id": "dockge",
-    "name": "Dockge",
-    "description": "Docker Compose可视化面板，支持一键部署和管理堆栈",
-    "icon": "https://www.google.com/s2/favicons?domain=dockge.kuma.pet&sz=128",
-    "docker_compose_path": "templates/dockge/docker-compose.yaml",
-    "args_path": "templates/dockge/args.json"
+    "id": "grocy",
+    "name": "Grocy",
+    "description": "家庭库存物品管理",
+    "icon": "https://www.google.com/s2/favicons?domain=grocy.local&sz=128",
+    "docker_compose_path": "templates/grocy/docker-compose.yaml",
+    "args_path": "templates/grocy/args.json"
   },
   {
-    "id": "watchtower",
-    "name": "Watchtower",
-    "description": "容器自动更新工具，定时检测并更新镜像",
-    "icon": "https://www.google.com/s2/favicons?domain=containrrr.dev&sz=128",
-    "docker_compose_path": "templates/watchtower/docker-compose.yaml",
-    "args_path": "templates/watchtower/args.json"
-  },
-  {
-    "id": "memos",
-    "name": "Memos",
-    "description": "碎片化知识笔记工具，支持Markdown",
-    "icon": "https://www.google.com/s2/favicons?domain=usememos.com&sz=128",
-    "docker_compose_path": "templates/memos/docker-compose.yaml",
-    "args_path": "templates/memos/args.json"
-  },
-  {
-    "id": "wikijs",
-    "name": "Wiki.js",
-    "description": "开源Wiki知识库系统，支持Markdown",
-    "icon": "https://www.google.com/s2/favicons?domain=js.wiki&sz=128",
-    "docker_compose_path": "templates/wikijs/docker-compose.yaml",
-    "args_path": "templates/wikijs/args.json"
-  },
-  {
-    "id": "affine",
-    "name": "Affine",
-    "description": "无界白板+文档工具，Notion开源替代",
-    "icon": "https://www.google.com/s2/favicons?domain=affine.pro&sz=128",
-    "docker_compose_path": "templates/affine/docker-compose.yaml",
-    "args_path": "templates/affine/args.json"
-  },
-  {
-    "id": "rustdesk-server",
-    "name": "RustDesk",
-    "description": "自托管远程桌面工具",
-    "icon": "https://www.google.com/s2/favicons?domain=rustdesk.com&sz=128",
-    "docker_compose_path": "templates/rustdesk/docker-compose.yaml",
-    "args_path": "templates/rustdesk/args.json"
-  },
-  {
-    "id": "open-webui",
-    "name": "Open WebUI",
-    "description": "AI聊天Web界面，支持本地大模型",
-    "icon": "https://www.google.com/s2/favicons?domain=openwebui.com&sz=128",
-    "docker_compose_path": "templates/open-webui/docker-compose.yaml",
-    "args_path": "templates/open-webui/args.json"
-  },
-  {
-    "id": "photoprism",
-    "name": "PhotoPrism",
-    "description": "开源家庭相册管理，支持AI识别",
-    "icon": "https://www.google.com/s2/favicons?domain=photoprism.app&sz=128",
-    "docker_compose_path": "templates/photoprism/docker-compose.yaml",
-    "args_path": "templates/photoprism/args.json"
-  },
-  {
-    "id": "filebrowser",
-    "name": "FileBrowser",
-    "description": "文件管理工具，支持Web上传下载",
-    "icon": "https://www.google.com/s2/favicons?domain=filebrowser.com&sz=128",
-    "docker_compose_path": "templates/filebrowser/docker-compose.yaml",
-    "args_path": "templates/filebrowser/args.json"
+    "id": "heimdall",
+    "name": "Heimdall",
+    "description": "应用导航首页，支持自定义图标",
+    "icon": "https://www.google.com/s2/favicons?domain=heimdall.site&sz=128",
+    "docker_compose_path": "templates/heimdall/docker-compose.yaml",
+    "args_path": "templates/heimdall/args.json"
   },
   {
     "id": "hertzbeat",
@@ -408,28 +176,44 @@
     "args_path": "templates/hertzbeat/args.json"
   },
   {
-    "id": "bookstack",
-    "name": "BookStack",
-    "description": "团队知识库文档系统",
-    "icon": "https://www.google.com/s2/favicons?domain=bookstackapp.com&sz=128",
-    "docker_compose_path": "templates/bookstack/docker-compose.yaml",
-    "args_path": "templates/bookstack/args.json"
+    "id": "home-assistant",
+    "name": "Home Assistant",
+    "description": "智能家居中枢，默认 host 网络与特权模式，减少发现设备的配置成本",
+    "icon": "https://www.google.com/s2/favicons?domain=home-assistant.io&sz=128",
+    "docker_compose_path": "templates/home-assistant/docker-compose.yaml",
+    "args_path": "templates/home-assistant/args.json"
   },
   {
-    "id": "lanraragi",
-    "name": "LANraragi",
-    "description": "同人志 manga 阅读器",
-    "icon": "https://www.google.com/s2/favicons?domain=lanraragi.org&sz=128",
-    "docker_compose_path": "templates/lanraragi/docker-compose.yaml",
-    "args_path": "templates/lanraragi/args.json"
+    "id": "homepage",
+    "name": "Homepage",
+    "description": "自建应用导航主页，支持 Docker 状态监控",
+    "icon": "https://www.google.com/s2/favicons?domain=gethomepage.dev&sz=128",
+    "docker_compose_path": "templates/homepage/docker-compose.yaml",
+    "args_path": "templates/homepage/args.json"
   },
   {
-    "id": "spacedrive",
-    "name": "Spacedrive",
-    "description": "跨平台文件管理系统",
-    "icon": "https://www.google.com/s2/favicons?domain=spacedrive.com&sz=128",
-    "docker_compose_path": "templates/spacedrive/docker-compose.yaml",
-    "args_path": "templates/spacedrive/args.json"
+    "id": "immich",
+    "name": "Immich",
+    "description": "照片备份与管理服务，内置 Redis 和 Postgres 依赖，适合一键起完整栈",
+    "icon": "https://www.google.com/s2/favicons?domain=immich.app&sz=128",
+    "docker_compose_path": "templates/immich/docker-compose.yaml",
+    "args_path": "templates/immich/args.json"
+  },
+  {
+    "id": "it-tools",
+    "name": "IT-Tools",
+    "description": "开发者工具集合，包含80+常用小工具",
+    "icon": "https://www.google.com/s2/favicons?domain=corentin-thomasset.fr&sz=128",
+    "docker_compose_path": "templates/it-tools/docker-compose.yaml",
+    "args_path": "templates/it-tools/args.json"
+  },
+  {
+    "id": "jackett",
+    "name": "Jackett",
+    "description": "索引器聚合服务，支持 Torznab API",
+    "icon": "https://www.google.com/s2/favicons?domain=jackett.io&sz=128",
+    "docker_compose_path": "templates/jackett/docker-compose.yaml",
+    "args_path": "templates/jackett/args.json"
   },
   {
     "id": "jan",
@@ -440,6 +224,182 @@
     "args_path": "templates/jan/args.json"
   },
   {
+    "id": "jellyfin",
+    "name": "Jellyfin",
+    "description": "开源影音媒体库，默认提供 HTTP 访问与媒体目录挂载",
+    "icon": "https://www.google.com/s2/favicons?domain=jellyfin.org&sz=128",
+    "docker_compose_path": "templates/jellyfin/docker-compose.yaml",
+    "args_path": "templates/jellyfin/args.json"
+  },
+  {
+    "id": "komga",
+    "name": "Komga",
+    "description": "漫画和电子书服务器，支持OPDS",
+    "icon": "https://www.google.com/s2/favicons?domain=komga.org&sz=128",
+    "docker_compose_path": "templates/komga/docker-compose.yaml",
+    "args_path": "templates/komga/args.json"
+  },
+  {
+    "id": "lanraragi",
+    "name": "LANraragi",
+    "description": "同人志 manga 阅读器",
+    "icon": "https://www.google.com/s2/favicons?domain=lanraragi.org&sz=128",
+    "docker_compose_path": "templates/lanraragi/docker-compose.yaml",
+    "args_path": "templates/lanraragi/args.json"
+  },
+  {
+    "id": "lidarr",
+    "name": "Lidarr",
+    "description": "音乐自动化管理服务",
+    "icon": "https://www.google.com/s2/favicons?domain=lidarr.audio&sz=128",
+    "docker_compose_path": "templates/lidarr/docker-compose.yaml",
+    "args_path": "templates/lidarr/args.json"
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "description": "DDNS、反向代理与内网穿透工具，默认 host 网络",
+    "icon": "https://www.google.com/s2/favicons?domain=lucky666.cn&sz=128",
+    "docker_compose_path": "templates/lucky/docker-compose.yaml",
+    "args_path": "templates/lucky/args.json"
+  },
+  {
+    "id": "memos",
+    "name": "Memos",
+    "description": "碎片化知识笔记工具，支持Markdown",
+    "icon": "https://www.google.com/s2/favicons?domain=usememos.com&sz=128",
+    "docker_compose_path": "templates/memos/docker-compose.yaml",
+    "args_path": "templates/memos/args.json"
+  },
+  {
+    "id": "moviepilot",
+    "name": "MoviePilot",
+    "description": "影视自动化管理服务，适合与下载器和媒体库联动",
+    "icon": "https://www.google.com/s2/favicons?domain=movie-pilot.org&sz=128",
+    "docker_compose_path": "templates/moviepilot/docker-compose.yaml",
+    "args_path": "templates/moviepilot/args.json"
+  },
+  {
+    "id": "nastools",
+    "name": "NASTools",
+    "description": "影视媒体管理工具，支持自动下载和整理",
+    "icon": "https://www.google.com/s2/favicons?domain=nastool.eu&sz=128",
+    "docker_compose_path": "templates/nastools/docker-compose.yaml",
+    "args_path": "templates/nastools/args.json"
+  },
+  {
+    "id": "navidrome",
+    "name": "Navidrome",
+    "description": "开源音乐服务器，支持流媒体播放和管理",
+    "icon": "https://www.google.com/s2/favicons?domain=navidrome.org&sz=128",
+    "docker_compose_path": "templates/navidrome/docker-compose.yaml",
+    "args_path": "templates/navidrome/args.json"
+  },
+  {
+    "id": "nextcloud",
+    "name": "Nextcloud",
+    "description": "私有云盘与办公套件，支持文件、日历、联系人管理",
+    "icon": "https://www.google.com/s2/favicons?domain=nextcloud.com&sz=128",
+    "docker_compose_path": "templates/nextcloud/docker-compose.yaml",
+    "args_path": "templates/nextcloud/args.json"
+  },
+  {
+    "id": "nginx-static",
+    "name": "Nginx 静态站点",
+    "description": "快速部署一个可挂载静态目录的 Nginx 服务",
+    "icon": "https://www.google.com/s2/favicons?domain=nginx.org&sz=128",
+    "docker_compose_path": "templates/nginx-static/docker-compose.yaml",
+    "args_path": "templates/nginx-static/args.json"
+  },
+  {
+    "id": "open-webui",
+    "name": "Open WebUI",
+    "description": "AI聊天Web界面，支持本地大模型",
+    "icon": "https://www.google.com/s2/favicons?domain=openwebui.com&sz=128",
+    "docker_compose_path": "templates/open-webui/docker-compose.yaml",
+    "args_path": "templates/open-webui/args.json"
+  },
+  {
+    "id": "overseerr",
+    "name": "Overseerr",
+    "description": "影视媒体请求管理服务",
+    "icon": "https://www.google.com/s2/favicons?domain=overseerr.io&sz=128",
+    "docker_compose_path": "templates/overseerr/docker-compose.yaml",
+    "args_path": "templates/overseerr/args.json"
+  },
+  {
+    "id": "photoprism",
+    "name": "PhotoPrism",
+    "description": "开源家庭相册管理，支持AI识别",
+    "icon": "https://www.google.com/s2/favicons?domain=photoprism.app&sz=128",
+    "docker_compose_path": "templates/photoprism/docker-compose.yaml",
+    "args_path": "templates/photoprism/args.json"
+  },
+  {
+    "id": "plex",
+    "name": "Plex",
+    "description": "Plex 媒体库，默认使用 host 网络，适合局域网即装即用",
+    "icon": "https://www.google.com/s2/favicons?domain=plex.tv&sz=128",
+    "docker_compose_path": "templates/plex/docker-compose.yaml",
+    "args_path": "templates/plex/args.json"
+  },
+  {
+    "id": "portainer",
+    "name": "Portainer",
+    "description": "Docker 图形化管理面板，适合先部署后统一管理其它容器",
+    "icon": "https://www.google.com/s2/favicons?domain=portainer.io&sz=128",
+    "docker_compose_path": "templates/portainer/docker-compose.yaml",
+    "args_path": "templates/portainer/args.json"
+  },
+  {
+    "id": "prowlarr",
+    "name": "Prowlarr",
+    "description": "索引器聚合管理服务，可统一给 Sonarr、Radarr 等提供索引源",
+    "icon": "https://www.google.com/s2/favicons?domain=prowlarr.com&sz=128",
+    "docker_compose_path": "templates/prowlarr/docker-compose.yaml",
+    "args_path": "templates/prowlarr/args.json"
+  },
+  {
+    "id": "qbittorrent",
+    "name": "qBittorrent",
+    "description": "常用下载器模板，默认带 WebUI 与 BT 端口",
+    "icon": "https://www.google.com/s2/favicons?domain=qbittorrent.org&sz=128",
+    "docker_compose_path": "templates/qbittorrent/docker-compose.yaml",
+    "args_path": "templates/qbittorrent/args.json"
+  },
+  {
+    "id": "radarr",
+    "name": "Radarr",
+    "description": "电影自动化管理服务，适合配合下载器一起使用",
+    "icon": "https://www.google.com/s2/favicons?domain=radarr.video&sz=128",
+    "docker_compose_path": "templates/radarr/docker-compose.yaml",
+    "args_path": "templates/radarr/args.json"
+  },
+  {
+    "id": "rustdesk-server",
+    "name": "RustDesk",
+    "description": "自托管远程桌面工具",
+    "icon": "https://www.google.com/s2/favicons?domain=rustdesk.com&sz=128",
+    "docker_compose_path": "templates/rustdesk/docker-compose.yaml",
+    "args_path": "templates/rustdesk/args.json"
+  },
+  {
+    "id": "sonarr",
+    "name": "Sonarr",
+    "description": "电视剧自动化管理服务，适合配合下载器一起使用",
+    "icon": "https://www.google.com/s2/favicons?domain=sonarr.tv&sz=128",
+    "docker_compose_path": "templates/sonarr/docker-compose.yaml",
+    "args_path": "templates/sonarr/args.json"
+  },
+  {
+    "id": "spacedrive",
+    "name": "Spacedrive",
+    "description": "跨平台文件管理系统",
+    "icon": "https://www.google.com/s2/favicons?domain=spacedrive.com&sz=128",
+    "docker_compose_path": "templates/spacedrive/docker-compose.yaml",
+    "args_path": "templates/spacedrive/args.json"
+  },
+  {
     "id": "stirling-pdf",
     "name": "Stirling-PDF",
     "description": "PDF工具箱，支持转换、分割、合并等",
@@ -448,27 +408,67 @@
     "args_path": "templates/stirling-pdf/args.json"
   },
   {
-    "id": "beszel",
-    "name": "Beszel",
-    "description": "轻量级服务器监控工具",
-    "icon": "https://www.google.com/s2/favicons?domain=beszel.dev&sz=128",
-    "docker_compose_path": "templates/beszel/docker-compose.yaml",
-    "args_path": "templates/beszel/args.json"
+    "id": "syncthing",
+    "name": "Syncthing",
+    "description": "文件同步服务，支持多设备",
+    "icon": "https://www.google.com/s2/favicons?domain=syncthing.net&sz=128",
+    "docker_compose_path": "templates/syncthing/docker-compose.yaml",
+    "args_path": "templates/syncthing/args.json"
   },
   {
-    "id": "easyimage2",
-    "name": "EasyImage2",
-    "description": "轻量级图床程序",
-    "icon": "https://www.google.com/s2/favicons?domain=image.io&sz=128",
-    "docker_compose_path": "templates/easyimage2/docker-compose.yaml",
-    "args_path": "templates/easyimage2/args.json"
+    "id": "tautulli",
+    "name": "Tautulli",
+    "description": "媒体播放统计和监控",
+    "icon": "https://www.google.com/s2/favicons?domain=tautulli.com&sz=128",
+    "docker_compose_path": "templates/tautulli/docker-compose.yaml",
+    "args_path": "templates/tautulli/args.json"
   },
   {
-    "id": "grocy",
-    "name": "Grocy",
-    "description": "家庭库存物品管理",
-    "icon": "https://www.google.com/s2/favicons?domain=grocy.local&sz=128",
-    "docker_compose_path": "templates/grocy/docker-compose.yaml",
-    "args_path": "templates/grocy/args.json"
+    "id": "transmission",
+    "name": "Transmission",
+    "description": "轻量级 BT 下载器，资源占用低",
+    "icon": "https://www.google.com/s2/favicons?domain=transmissionbt.com&sz=128",
+    "docker_compose_path": "templates/transmission/docker-compose.yaml",
+    "args_path": "templates/transmission/args.json"
+  },
+  {
+    "id": "uptime-kuma",
+    "name": "Uptime Kuma",
+    "description": "自建网站监控工具，支持宕机告警",
+    "icon": "https://www.google.com/s2/favicons?domain=kuma.pet&sz=128",
+    "docker_compose_path": "templates/uptime-kuma/docker-compose.yaml",
+    "args_path": "templates/uptime-kuma/args.json"
+  },
+  {
+    "id": "vaultwarden",
+    "name": "Vaultwarden",
+    "description": "开源密码管理器，支持多设备同步",
+    "icon": "https://www.google.com/s2/favicons?domain=bitwarden.com&sz=128",
+    "docker_compose_path": "templates/vaultwarden/docker-compose.yaml",
+    "args_path": "templates/vaultwarden/args.json"
+  },
+  {
+    "id": "watchtower",
+    "name": "Watchtower",
+    "description": "容器自动更新工具，定时检测并更新镜像",
+    "icon": "https://www.google.com/s2/favicons?domain=containrrr.dev&sz=128",
+    "docker_compose_path": "templates/watchtower/docker-compose.yaml",
+    "args_path": "templates/watchtower/args.json"
+  },
+  {
+    "id": "wikijs",
+    "name": "Wiki.js",
+    "description": "开源Wiki知识库系统，支持Markdown",
+    "icon": "https://www.google.com/s2/favicons?domain=js.wiki&sz=128",
+    "docker_compose_path": "templates/wikijs/docker-compose.yaml",
+    "args_path": "templates/wikijs/args.json"
+  },
+  {
+    "id": "qinglong",
+    "name": "青龙",
+    "description": "定时任务与脚本面板，适合统一管理自动化脚本",
+    "icon": "terminal",
+    "docker_compose_path": "templates/qinglong/docker-compose.yaml",
+    "args_path": "templates/qinglong/args.json"
   }
 ]
