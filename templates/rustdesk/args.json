@@ -11,34 +11,54 @@
       "default_value": "rustdesk-server"
     },
     {
-      "key": "rpc_port",
-      "label": "RPC端口",
-      "description": "RPC 端口",
-      "placeholder": "21114",
+      "key": "id_port",
+      "label": "ID 服务端口",
+      "description": "RustDesk ID/Rendezvous 服务端口",
+      "placeholder": "21115",
       "value_type": "number",
       "input": "number",
       "required": true,
-      "default_value": "21114"
+      "default_value": "21115"
+    },
+    {
+      "key": "signal_port",
+      "label": "信令端口",
+      "description": "RustDesk 信令端口，同时映射 TCP/UDP",
+      "placeholder": "21116",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "21116"
     },
     {
       "key": "relay_port",
       "label": "中继端口",
-      "description": "中继端口",
-      "placeholder": "21116",
+      "description": "RustDesk Relay 服务端口",
+      "placeholder": "21117",
       "value_type": "number",
       "input": "number",
       "required": true,
-      "default_value": "21116"
+      "default_value": "21117"
+    },
+    {
+      "key": "web_port",
+      "label": "Web 控制台端口",
+      "description": "RustDesk Web 控制台端口",
+      "placeholder": "21118",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "21118"
     },
     {
       "key": "api_port",
-      "label": "API端口",
-      "description": "API 端口",
-      "placeholder": "21116",
+      "label": "API 端口",
+      "description": "RustDesk API 端口",
+      "placeholder": "21119",
       "value_type": "number",
       "input": "number",
       "required": true,
-      "default_value": "21116"
+      "default_value": "21119"
     },
     {
       "key": "data_dir",

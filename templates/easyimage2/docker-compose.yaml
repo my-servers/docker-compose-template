@@ -4,7 +4,7 @@ services:
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:8080"
+      - "{{http_port}}:80"
     volumes:
       - {{data_dir}}:/var/www/html
     environment:

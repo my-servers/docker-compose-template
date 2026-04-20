@@ -1,16 +1,36 @@
 services:
+  bookstack-db:
+    image: lscr.io/linuxserver/mariadb:latest
+    restart: unless-stopped
+    environment:
+      - TZ={{timezone}}
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - MYSQL_ROOT_PASSWORD={{db_root_password}}
+      - MYSQL_DATABASE={{db_name}}
+      - MYSQL_USER={{db_user}}
+      - MYSQL_PASSWORD={{db_password}}
+    volumes:
+      - {{db_dir}}:/config
+
   bookstack:
-    image: solidnerd/bookstack:25.01
+    image: lscr.io/linuxserver/bookstack:latest
     container_name: {{container_name}}
     restart: unless-stopped
+    depends_on:
+      - bookstack-db
     ports:
       - "{{http_port}}:80"
     volumes:
-      - {{data_dir}}:/var/www/bookstack/public/uploads
-      - {{db_dir}}:/var/www/bookstack/database
+      - {{config_dir}}:/config
     environment:
-      - TZ=Asia/Shanghai
-      - DB_HOST=localhost
-      - DB_DATABASE=bookstack
-      - DB_USERNAME=bookstack
-      - DB_PASSWORD=bookstack
+      - TZ={{timezone}}
+      - PUID={{puid}}
+      - PGID={{pgid}}
+      - APP_URL={{app_url}}
+      - APP_KEY={{app_key}}
+      - DB_HOST=bookstack-db
+      - DB_PORT=3306
+      - DB_USER={{db_user}}
+      - DB_PASS={{db_password}}
+      - DB_NAME={{db_name}}

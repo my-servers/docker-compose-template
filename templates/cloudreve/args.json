@@ -21,24 +21,14 @@
       "default_value": "5212"
     },
     {
-      "key": "uploads_dir",
-      "label": "上传目录",
-      "description": "用户上传文件目录",
-      "placeholder": "./uploads",
+      "key": "data_dir",
+      "label": "数据目录",
+      "description": "Cloudreve 配置、数据库、缓存与上传文件目录",
+      "placeholder": "./data",
       "value_type": "string",
       "input": "path",
       "required": true,
-      "default_value": "./uploads"
-    },
-    {
-      "key": "config_dir",
-      "label": "配置目录",
-      "description": "Cloudreve 配置与数据库目录",
-      "placeholder": "./config",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./config"
+      "default_value": "./data"
     }
   ],
   "groups": []

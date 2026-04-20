@@ -11,24 +11,124 @@
       "default_value": "bookstack"
     },
     {
-      "key": "http_port",
-      "label": "访问端口",
-      "description": "BookStack Web 页面端口",
-      "placeholder": "8080",
+      "key": "timezone",
+      "label": "时区",
+      "description": "容器运行时区",
+      "placeholder": "Asia/Shanghai",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "Asia/Shanghai"
+    },
+    {
+      "key": "puid",
+      "label": "PUID",
+      "description": "宿主机用户 ID，群晖/飞牛常见为 1000",
+      "placeholder": "1000",
       "value_type": "number",
       "input": "number",
       "required": true,
-      "default_value": "8080"
+      "default_value": "1000"
     },
     {
-      "key": "data_dir",
-      "label": "数据目录",
-      "description": "BookStack 数据目录",
-      "placeholder": "./data",
+      "key": "pgid",
+      "label": "PGID",
+      "description": "宿主机用户组 ID，群晖/飞牛常见为 1000",
+      "placeholder": "1000",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "1000"
+    },
+    {
+      "key": "http_port",
+      "label": "访问端口",
+      "description": "BookStack Web 页面端口",
+      "placeholder": "6875",
+      "value_type": "number",
+      "input": "number",
+      "required": true,
+      "default_value": "6875"
+    },
+    {
+      "key": "app_url",
+      "label": "访问地址",
+      "description": "BookStack 对外访问地址，默认端口 6875",
+      "placeholder": "http://localhost:6875",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "http://localhost:6875"
+    },
+    {
+      "key": "app_key",
+      "label": "应用密钥",
+      "description": "Laravel 应用密钥，默认值可直接启动，公网环境建议改成随机值",
+      "placeholder": "base64:WkKZ/61BD9KeQec/vQs3DO8tsHxZogGv1SirSQY87Pc=",
+      "value_type": "string",
+      "input": "password",
+      "required": true,
+      "default_value": "base64:WkKZ/61BD9KeQec/vQs3DO8tsHxZogGv1SirSQY87Pc="
+    },
+    {
+      "key": "config_dir",
+      "label": "配置目录",
+      "description": "BookStack 应用配置与上传目录",
+      "placeholder": "./config",
       "value_type": "string",
       "input": "path",
       "required": true,
-      "default_value": "./data"
+      "default_value": "./config"
+    },
+    {
+      "key": "db_dir",
+      "label": "数据库目录",
+      "description": "MariaDB 数据目录",
+      "placeholder": "./db",
+      "value_type": "string",
+      "input": "path",
+      "required": true,
+      "default_value": "./db"
+    },
+    {
+      "key": "db_name",
+      "label": "数据库名",
+      "description": "BookStack 使用的数据库名",
+      "placeholder": "bookstack",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "bookstack"
+    },
+    {
+      "key": "db_user",
+      "label": "数据库用户",
+      "description": "BookStack 数据库用户名",
+      "placeholder": "bookstack",
+      "value_type": "string",
+      "input": "text",
+      "required": true,
+      "default_value": "bookstack"
+    },
+    {
+      "key": "db_password",
+      "label": "数据库密码",
+      "description": "BookStack 数据库密码",
+      "placeholder": "bookstack",
+      "value_type": "string",
+      "input": "password",
+      "required": true,
+      "default_value": "bookstack"
+    },
+    {
+      "key": "db_root_password",
+      "label": "数据库 Root 密码",
+      "description": "MariaDB Root 密码，默认值可直接启动",
+      "placeholder": "bookstack-root",
+      "value_type": "string",
+      "input": "password",
+      "required": true,
+      "default_value": "bookstack-root"
     }
   ],
   "groups": []

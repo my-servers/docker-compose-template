@@ -6,5 +6,4 @@ services:
     ports:
       - "{{http_port}}:5212"
     volumes:
-      - {{uploads_dir}}:/cloudreve/uploads
-      - {{config_dir}}:/cloudreve/conf
+      - {{data_dir}}:/cloudreve/data

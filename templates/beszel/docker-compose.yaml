@@ -6,6 +6,6 @@ services:
     ports:
       - "{{http_port}}:8090"
     volumes:
-      - {{data_dir}}:/beszel/data
+      - {{data_dir}}:/beszel_data
     environment:
       - TZ=Asia/Shanghai

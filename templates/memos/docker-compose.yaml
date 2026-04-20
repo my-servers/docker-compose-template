@@ -1,10 +1,10 @@
 services:
   memos:
-    image: usememos/memos:latest
+    image: neosmemo/memos:stable
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:8081"
+      - "{{http_port}}:5230"
     volumes:
       - {{data_dir}}:/var/opt/memos
     environment:

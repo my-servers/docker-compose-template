@@ -1,6 +1,6 @@
 services:
   hertzbeat:
-    image: hertzbeat/hertzbeat:{{version}}
+    image: apache/hertzbeat:{{version}}
     container_name: {{container_name}}
     restart: unless-stopped
     ports:

@@ -1,6 +1,6 @@
 services:
   flaresolverr:
-    image: lscr.io/linuxserver/flaresolverr:latest
+    image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: {{container_name}}
     restart: unless-stopped
     environment:

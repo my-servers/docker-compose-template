@@ -8,14 +8,6 @@
     "args_path": "templates/adguard-home/args.json"
   },
   {
-    "id": "affine",
-    "name": "Affine",
-    "description": "无界白板+文档工具，Notion开源替代",
-    "icon": "https://www.google.com/s2/favicons?domain=affine.pro&sz=128",
-    "docker_compose_path": "templates/affine/docker-compose.yaml",
-    "args_path": "templates/affine/args.json"
-  },
-  {
     "id": "alist",
     "name": "AList",
     "description": "网盘聚合与文件列表服务，适合统一管理多种存储源",
@@ -50,7 +42,7 @@
   {
     "id": "bookstack",
     "name": "BookStack",
-    "description": "团队知识库文档系统",
+    "description": "团队知识库文档系统，默认带 MariaDB，首次登录可使用 admin@admin.com / password",
     "icon": "https://www.google.com/s2/favicons?domain=bookstackapp.com&sz=128",
     "docker_compose_path": "templates/bookstack/docker-compose.yaml",
     "args_path": "templates/bookstack/args.json"
@@ -74,7 +66,7 @@
   {
     "id": "cloudreve",
     "name": "Cloudreve",
-    "description": "自建网盘与分享服务，默认使用内置 SQLite 模式降低部署成本",
+    "description": "自建网盘与分享服务，默认单目录持久化，首次注册账户即管理员",
     "icon": "https://www.google.com/s2/favicons?domain=cloudreve.org&sz=128",
     "docker_compose_path": "templates/cloudreve/docker-compose.yaml",
     "args_path": "templates/cloudreve/args.json"
@@ -214,14 +206,6 @@
     "icon": "https://www.google.com/s2/favicons?domain=jackett.io&sz=128",
     "docker_compose_path": "templates/jackett/docker-compose.yaml",
     "args_path": "templates/jackett/args.json"
-  },
-  {
-    "id": "jan",
-    "name": "Jan",
-    "description": "本地运行AI大模型工具",
-    "icon": "https://www.google.com/s2/favicons?domain=jan.ai&sz=128",
-    "docker_compose_path": "templates/jan/docker-compose.yaml",
-    "args_path": "templates/jan/args.json"
   },
   {
     "id": "jellyfin",

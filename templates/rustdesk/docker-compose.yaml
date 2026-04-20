@@ -1,12 +1,26 @@
 services:
-  rustdesk-server:
+  hbbs:
     image: rustdesk/rustdesk-server:latest
-    container_name: {{container_name}}
+    container_name: {{container_name}}-hbbs
+    restart: unless-stopped
+    depends_on:
+      - hbbr
+    ports:
+      - "{{id_port}}:21115"
+      - "{{signal_port}}:21116"
+      - "{{signal_port}}:21116/udp"
+      - "{{web_port}}:21118"
+    volumes:
+      - {{data_dir}}:/root
+    command: hbbs
+
+  hbbr:
+    image: rustdesk/rustdesk-server:latest
+    container_name: {{container_name}}-hbbr
     restart: unless-stopped
     ports:
-      - "{{rpc_port}}:21114"
-      - "{{relay_port}}:21116"
-      - "{{api_port}}:21116"
+      - "{{relay_port}}:21117"
+      - "{{api_port}}:21119"
     volumes:
-      - {{data_dir}}:/data
-    command: server
+      - {{data_dir}}:/root
+    command: hbbr
