@@ -11,6 +11,6 @@ services:
       - VERSION=docker
       - PLEX_CLAIM={{plex_claim}}
     volumes:
-      - {{config_dir}}:/config
-      - {{transcode_dir}}:/transcode
-      - {{media_dir}}:/media
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

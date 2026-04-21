@@ -7,9 +7,9 @@ services:
       - TZ={{timezone}}
       - CLOUDDRIVE_HOME=/Config
     volumes:
-      - {{mount_dir}}:/CloudNAS:shared
-      - {{config_dir}}:/Config
-      - {{media_dir}}:/media:shared
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     devices:
       - /dev/fuse:/dev/fuse
     pid: host

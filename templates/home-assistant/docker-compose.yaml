@@ -8,4 +8,6 @@ services:
     environment:
       - TZ={{timezone}}
     volumes:
-      - {{config_dir}}:/config
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

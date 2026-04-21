@@ -7,9 +7,10 @@ services:
       - TZ={{timezone}}
       - RPC_SECRET={{rpc_secret}}
     ports:
-      - "{{rpc_port}}:6800"
-      - "6888:6888"
-      - "6888:6888/udp"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{downloads_dir}}:/downloads
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

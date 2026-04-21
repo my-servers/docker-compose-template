@@ -9,17 +9,101 @@
       "input": "text",
       "required": true,
       "default_value": "ddns-go"
-    },
-    {
-      "key": "config_dir",
-      "label": "配置目录",
-      "description": "ddns-go 配置目录",
-      "placeholder": "./data",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./data"
     }
   ],
-  "groups": []
+  "groups": [
+    {
+      "key": "volumes",
+      "label": "目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机目录路径",
+          "placeholder": "./data",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./data"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "容器内目录路径",
+          "placeholder": "/root",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/root"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "rw",
+          "options": [
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./data",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./data"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/root",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/root"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

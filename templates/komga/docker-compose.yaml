@@ -4,10 +4,13 @@ services:
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:25600"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{data_dir}}:/data
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     environment:
       - PUID={{puid}}
       - PGID={{pgid}}

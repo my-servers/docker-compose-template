@@ -9,37 +9,237 @@
       "input": "text",
       "required": true,
       "default_value": "lanraragi"
-    },
-    {
-      "key": "http_port",
-      "label": "访问端口",
-      "description": "LANraragi Web 页面端口",
-      "default_value": "9999",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "9999"
-    },
-    {
-      "key": "data_dir",
-      "label": "数据目录",
-      "description": "LANraragi 数据目录",
-      "placeholder": "./data",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./data"
-    },
-    {
-      "key": "content_dir",
-      "label": "内容目录",
-      "description": "同人志内容目录",
-      "placeholder": "./content",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./content"
     }
   ],
-  "groups": []
+  "groups": [
+    {
+      "key": "ports",
+      "label": "端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "9999",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "9999"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "9999",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "9999"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "9999",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "9999"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "9999",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "9999"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "volumes",
+      "label": "目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机目录路径",
+          "placeholder": "./data",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./data"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "容器内目录路径",
+          "placeholder": "/home/lnr/data",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/home/lnr/data"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "rw",
+          "options": [
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./data",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./data"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/home/lnr/data",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/home/lnr/data"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./content",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./content"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/home/lnr/content",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/home/lnr/content"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

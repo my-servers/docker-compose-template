@@ -8,8 +8,10 @@ services:
       - PGID={{pgid}}
       - TZ=Asia/Shanghai
     ports:
-      - "{{http_port}}:8200"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{backups_dir}}:/backups
-      - {{source_dir}}:/source
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

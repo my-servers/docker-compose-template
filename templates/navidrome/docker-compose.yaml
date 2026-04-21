@@ -5,9 +5,12 @@ services:
     restart: unless-stopped
     user: "{{puid}}:{{pgid}}"
     ports:
-      - "{{http_port}}:4533"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{data_dir}}:/data
-      - {{music_dir}}:/music:ro
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     environment:
       - TZ=Asia/Shanghai

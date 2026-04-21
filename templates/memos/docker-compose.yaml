@@ -4,8 +4,12 @@ services:
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:5230"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{data_dir}}:/var/opt/memos
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     environment:
       - TZ=Asia/Shanghai

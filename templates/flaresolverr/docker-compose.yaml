@@ -8,4 +8,6 @@ services:
       - PGID={{pgid}}
       - TZ=Asia/Shanghai
     ports:
-      - "{{http_port}}:8191"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}

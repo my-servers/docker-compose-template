@@ -11,16 +11,6 @@
       "default_value": "photoprism"
     },
     {
-      "key": "http_port",
-      "label": "访问端口",
-      "description": "PhotoPrism Web 页面端口",
-      "placeholder": "2342",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "2342"
-    },
-    {
       "key": "admin_password",
       "label": "管理员密码",
       "description": "管理员密码",
@@ -29,27 +19,237 @@
       "input": "password",
       "required": true,
       "default_value": "photoprism"
-    },
-    {
-      "key": "storage_dir",
-      "label": "存储目录",
-      "description": "PhotoPrism 存储目录",
-      "placeholder": "./storage",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./storage"
-    },
-    {
-      "key": "photos_dir",
-      "label": "照片目录",
-      "description": "照片目录",
-      "placeholder": "./photos",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./photos"
     }
   ],
-  "groups": []
+  "groups": [
+    {
+      "key": "ports",
+      "label": "端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "2342",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "2342"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "2342",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "2342"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "2342",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "2342"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "2342",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "2342"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "volumes",
+      "label": "目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机目录路径",
+          "placeholder": "./storage",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./storage"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "容器内目录路径",
+          "placeholder": "/photoprism/storage",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/photoprism/storage"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "rw",
+          "options": [
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./storage",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./storage"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/photoprism/storage",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/photoprism/storage"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./photos",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./photos"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/photoprism/photos",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/photoprism/photos"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

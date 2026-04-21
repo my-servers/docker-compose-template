@@ -6,6 +6,10 @@ services:
     environment:
       - TZ={{timezone}}
     ports:
-      - "{{http_port}}:5700"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{data_dir}}:/ql/data
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

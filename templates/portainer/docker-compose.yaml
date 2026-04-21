@@ -4,8 +4,11 @@ services:
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:9000"
-      - "{{edge_port}}:8000"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
       - /var/run/docker.sock:/var/run/docker.sock
-      - {{data_dir}}:/data

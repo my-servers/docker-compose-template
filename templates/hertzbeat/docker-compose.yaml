@@ -4,9 +4,13 @@ services:
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:1158"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{data_dir}}:/opt/hertzbeat-data
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     environment:
       - TZ=Asia/Shanghai
       - DATABASE_TYPE=sqlite

@@ -6,12 +6,13 @@ services:
     depends_on:
       - hbbr
     ports:
-      - "{{id_port}}:21115"
-      - "{{signal_port}}:21116"
-      - "{{signal_port}}:21116/udp"
-      - "{{web_port}}:21118"
+{{#hbbs_ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/hbbs_ports}}
     volumes:
-      - {{data_dir}}:/root
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     command: hbbs
 
   hbbr:
@@ -19,8 +20,11 @@ services:
     container_name: {{container_name}}-hbbr
     restart: unless-stopped
     ports:
-      - "{{relay_port}}:21117"
-      - "{{api_port}}:21119"
+{{#hbbr_ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/hbbr_ports}}
     volumes:
-      - {{data_dir}}:/root
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     command: hbbr

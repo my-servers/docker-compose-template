@@ -15,9 +15,13 @@ services:
       - REDIS_HOSTNAME=immich-redis
       - UPLOAD_LOCATION=/usr/src/app/upload
     ports:
-      - "{{http_port}}:2283"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{uploads_dir}}:/usr/src/app/upload
+{{#server_volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/server_volumes}}
 
   immich-redis:
     image: redis:7-alpine
@@ -33,4 +37,6 @@ services:
       - POSTGRES_PASSWORD={{db_password}}
       - POSTGRES_DB=immich
     volumes:
-      - {{db_dir}}:/var/lib/postgresql/data
+{{#database_volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/database_volumes}}

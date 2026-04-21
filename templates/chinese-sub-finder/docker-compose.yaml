@@ -8,7 +8,10 @@ services:
       - PUID={{puid}}
       - PGID={{pgid}}
     ports:
-      - "{{http_port}}:19035"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{media_dir}}:/media
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

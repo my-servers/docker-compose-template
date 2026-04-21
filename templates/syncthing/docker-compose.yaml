@@ -8,9 +8,10 @@ services:
       - PGID={{pgid}}
       - TZ=Asia/Shanghai
     ports:
-      - "{{http_port}}:8384"
-      - "22000:22000"
-      - "22000:22000/udp"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{data_dir}}:/data
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

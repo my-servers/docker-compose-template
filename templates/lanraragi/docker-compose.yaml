@@ -4,9 +4,12 @@ services:
     container_name: {{container_name}}
     restart: unless-stopped
     ports:
-      - "{{http_port}}:9999"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{data_dir}}:/home/lnr/data
-      - {{content_dir}}:/home/lnr/content
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}
     environment:
       - TZ=Asia/Shanghai

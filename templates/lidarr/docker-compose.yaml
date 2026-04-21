@@ -8,7 +8,10 @@ services:
       - PGID={{pgid}}
       - TZ=Asia/Shanghai
     ports:
-      - "{{http_port}}:8686"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{music_dir}}:/music
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

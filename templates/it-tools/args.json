@@ -9,17 +9,101 @@
       "input": "text",
       "required": true,
       "default_value": "it-tools"
-    },
-    {
-      "key": "http_port",
-      "label": "访问端口",
-      "description": "IT-Tools Web 页面端口",
-      "placeholder": "8080",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "8080"
     }
   ],
-  "groups": []
+  "groups": [
+    {
+      "key": "ports",
+      "label": "端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "8080",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "8080"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "80",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "80"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "8080",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "8080"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "80",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "80"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

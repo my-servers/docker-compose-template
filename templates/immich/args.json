@@ -21,16 +21,6 @@
       "default_value": "Asia/Shanghai"
     },
     {
-      "key": "http_port",
-      "label": "访问端口",
-      "description": "Immich Web 页面端口",
-      "placeholder": "2283",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "2283"
-    },
-    {
       "key": "db_password",
       "label": "数据库密码",
       "description": "Immich PostgreSQL 密码",
@@ -39,27 +29,287 @@
       "input": "text",
       "required": true,
       "default_value": "immich"
-    },
-    {
-      "key": "uploads_dir",
-      "label": "照片目录",
-      "description": "Immich 上传照片目录",
-      "placeholder": "./library",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./library"
-    },
-    {
-      "key": "db_dir",
-      "label": "数据库目录",
-      "description": "PostgreSQL 数据目录",
-      "placeholder": "./postgres",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./postgres"
     }
   ],
-  "groups": []
+  "groups": [
+    {
+      "key": "ports",
+      "label": "端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "2283",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "2283"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "2283",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "2283"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "2283",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "2283"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "2283",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "2283"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "server_volumes",
+      "label": "应用目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机目录路径",
+          "placeholder": "./library",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./library"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "容器内目录路径",
+          "placeholder": "/usr/src/app/upload",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/usr/src/app/upload"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "rw",
+          "options": [
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./library",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./library"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/usr/src/app/upload",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/usr/src/app/upload"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "database_volumes",
+      "label": "数据库目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机目录路径",
+          "placeholder": "./postgres",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./postgres"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "容器内目录路径",
+          "placeholder": "/var/lib/postgresql/data",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/var/lib/postgresql/data"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "rw",
+          "options": [
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./postgres",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./postgres"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/var/lib/postgresql/data",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/var/lib/postgresql/data"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

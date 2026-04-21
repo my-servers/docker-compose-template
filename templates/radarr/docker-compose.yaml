@@ -8,8 +8,10 @@ services:
       - PUID={{puid}}
       - PGID={{pgid}}
     ports:
-      - "{{http_port}}:7878"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{movies_dir}}:/movies
-      - {{downloads_dir}}:/downloads
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

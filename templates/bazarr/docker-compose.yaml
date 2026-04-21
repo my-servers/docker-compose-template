@@ -8,8 +8,10 @@ services:
       - PGID={{pgid}}
       - TZ=Asia/Shanghai
     ports:
-      - "{{http_port}}:6767"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
-      - {{movies_dir}}:/movies
-      - {{tv_dir}}:/tv
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

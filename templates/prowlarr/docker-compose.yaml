@@ -8,6 +8,10 @@ services:
       - PUID={{puid}}
       - PGID={{pgid}}
     ports:
-      - "{{http_port}}:9696"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

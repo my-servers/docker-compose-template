@@ -11,7 +11,9 @@ services:
       - MYSQL_USER={{db_user}}
       - MYSQL_PASSWORD={{db_password}}
     volumes:
-      - {{db_dir}}:/config
+{{#db_volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/db_volumes}}
 
   bookstack:
     image: lscr.io/linuxserver/bookstack:latest
@@ -20,9 +22,13 @@ services:
     depends_on:
       - bookstack-db
     ports:
-      - "{{http_port}}:80"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{config_dir}}:/config
+{{#app_volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/app_volumes}}
     environment:
       - TZ={{timezone}}
       - PUID={{puid}}

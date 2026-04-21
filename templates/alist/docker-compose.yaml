@@ -8,6 +8,10 @@ services:
       - PGID={{pgid}}
       - UMASK=022
     ports:
-      - "{{http_port}}:5244"
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}
     volumes:
-      - {{data_dir}}:/opt/alist/data
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

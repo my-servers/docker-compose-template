@@ -8,6 +8,9 @@ services:
       - PGID={{pgid}}
       - TZ=Asia/Shanghai
     ports:
-      - "{{http_port}}:9117"
-    volumes:
-      - {{config_dir}}:/config
+{{#ports}}
+      - "{{host}}:{{container}}/{{protocol}}"
+{{/ports}}    volumes:
+{{#volumes}}
+      - {{source}}:{{target}}:{{mode}}
+{{/volumes}}

@@ -9,67 +9,459 @@
       "input": "text",
       "required": true,
       "default_value": "rustdesk-server"
-    },
-    {
-      "key": "id_port",
-      "label": "ID 服务端口",
-      "description": "RustDesk ID/Rendezvous 服务端口",
-      "placeholder": "21115",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "21115"
-    },
-    {
-      "key": "signal_port",
-      "label": "信令端口",
-      "description": "RustDesk 信令端口，同时映射 TCP/UDP",
-      "placeholder": "21116",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "21116"
-    },
-    {
-      "key": "relay_port",
-      "label": "中继端口",
-      "description": "RustDesk Relay 服务端口",
-      "placeholder": "21117",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "21117"
-    },
-    {
-      "key": "web_port",
-      "label": "Web 控制台端口",
-      "description": "RustDesk Web 控制台端口",
-      "placeholder": "21118",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "21118"
-    },
-    {
-      "key": "api_port",
-      "label": "API 端口",
-      "description": "RustDesk API 端口",
-      "placeholder": "21119",
-      "value_type": "number",
-      "input": "number",
-      "required": true,
-      "default_value": "21119"
-    },
-    {
-      "key": "data_dir",
-      "label": "数据目录",
-      "description": "RustDesk 数据目录",
-      "placeholder": "./data",
-      "value_type": "string",
-      "input": "path",
-      "required": true,
-      "default_value": "./data"
     }
   ],
-  "groups": []
+  "groups": [
+    {
+      "key": "hbbs_ports",
+      "label": "ID/信令端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "21115",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "21115"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "21115",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "21115"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "21115",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21115"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "21115",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21115"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "21116",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21116"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "21116",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21116"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "21116",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21116"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "21116",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21116"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "udp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "21118",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21118"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "21118",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21118"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hbbr_ports",
+      "label": "中继/API 端口映射",
+      "description": "支持添加多个端口映射",
+      "item_label": "端口",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "host",
+          "label": "宿主机端口",
+          "description": "暴露到宿主机的端口",
+          "placeholder": "21117",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "21117"
+        },
+        {
+          "key": "container",
+          "label": "容器端口",
+          "description": "容器内部监听端口",
+          "placeholder": "21117",
+          "value_type": "number",
+          "input": "number",
+          "required": true,
+          "default_value": "21117"
+        },
+        {
+          "key": "protocol",
+          "label": "协议",
+          "description": "端口协议",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "tcp",
+          "options": [
+            {
+              "label": "TCP",
+              "value": "tcp"
+            },
+            {
+              "label": "UDP",
+              "value": "udp"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "21117",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21117"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "21117",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21117"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "key": "host",
+              "label": "宿主机端口",
+              "description": "暴露到宿主机的端口",
+              "placeholder": "21119",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21119"
+            },
+            {
+              "key": "container",
+              "label": "容器端口",
+              "description": "容器内部监听端口",
+              "placeholder": "21119",
+              "value_type": "number",
+              "input": "number",
+              "required": true,
+              "default_value": "21119"
+            },
+            {
+              "key": "protocol",
+              "label": "协议",
+              "description": "端口协议",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "tcp",
+              "options": [
+                {
+                  "label": "TCP",
+                  "value": "tcp"
+                },
+                {
+                  "label": "UDP",
+                  "value": "udp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "volumes",
+      "label": "目录映射",
+      "description": "支持添加多个目录挂载",
+      "item_label": "目录",
+      "min_items": 1,
+      "fields": [
+        {
+          "key": "source",
+          "label": "宿主机目录",
+          "description": "宿主机目录路径",
+          "placeholder": "./data",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "./data"
+        },
+        {
+          "key": "target",
+          "label": "容器目录",
+          "description": "容器内目录路径",
+          "placeholder": "/root",
+          "value_type": "string",
+          "input": "path",
+          "required": true,
+          "default_value": "/root"
+        },
+        {
+          "key": "mode",
+          "label": "挂载模式",
+          "description": "目录挂载模式",
+          "value_type": "string",
+          "input": "select",
+          "required": true,
+          "default_value": "rw",
+          "options": [
+            {
+              "label": "只读",
+              "value": "ro"
+            },
+            {
+              "label": "读写",
+              "value": "rw"
+            }
+          ]
+        }
+      ],
+      "default_items": [
+        {
+          "fields": [
+            {
+              "key": "source",
+              "label": "宿主机目录",
+              "description": "宿主机目录路径",
+              "placeholder": "./data",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "./data"
+            },
+            {
+              "key": "target",
+              "label": "容器目录",
+              "description": "容器内目录路径",
+              "placeholder": "/root",
+              "value_type": "string",
+              "input": "path",
+              "required": true,
+              "default_value": "/root"
+            },
+            {
+              "key": "mode",
+              "label": "挂载模式",
+              "description": "目录挂载模式",
+              "value_type": "string",
+              "input": "select",
+              "required": true,
+              "default_value": "rw",
+              "options": [
+                {
+                  "label": "只读",
+                  "value": "ro"
+                },
+                {
+                  "label": "读写",
+                  "value": "rw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
